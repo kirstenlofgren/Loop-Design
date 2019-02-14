@@ -6,12 +6,22 @@ html {
 	--color-primary-1: #FFEBE0;
 	--color-primary-2: #FFC4A5;
 	--color-primary-3: #ED8E5E;
+
 	--color-secondary-1: #8A8CA3;
 	--color-secondary-2: #545566;
 	--color-secondary-3: #2D2E3D;
+
 	--color-tertiary-1: #FCFCFC;
 	--color-tertiary-2: #F7F8F9;
 	--color-tertiary-3: #E1E2E3;
+
+	--ratio:		1.414;
+	--size-xsmall: 	calc( var(--size-small) / var(--ratio) );
+	--size-small: 	calc( var(--size-large) / var(--ratio) );
+	--size-large: 	calc( 1rem * var(--ratio) );
+	--size-xlarge: 	calc( var(--size-large) * var(--ratio) );
+	--sixe-2xlarge:	calc( var(--size-xlarge) * var(--ratio) );
+	--size-3xlarge:	calc( var(--size-2xlarge) * var(--ratio) );
 }
 
 /* ==========================================================================
@@ -20,40 +30,13 @@ Typography
 html {
 	--font-primary: 'Source Sans Pro', 'Open Sans', sans-serif;
 	--font-secondary: 'Raleway', 'Open Sans', sans-serif;
-	line-height: 1.4;
-}
-
-/* ==========================================================================
-Typography
-========================================================================== */
-html {
+	
 	color: var(--color-secondary-3);
 	font-family: var(--font-primary);
+	line-height: 1.4;
 }
 h1,h2 {
 	font-family: var(--font-secondary);
-}
-.primary-font{
-	font-family: var(--font-primary);
-}
-.secondary-font{
-	font-family: var(--font-secondary);
-}
-nav a {
-	color: var(--color-secondary-1);
-	text-decoration: none;
-}
-nav a:visited {
-	color: var(--color-secondary-1);
-	text-decoration: none;
-}
-nav a:hover {
-	color: var(--color-primary-3);
-	text-decoration: none;
-}
-nav a:active {
-	color: var(--color-tertiary-3);
-	text-decoration: none;
 }
 a:link {
 	color: var(--color-primary-3);
@@ -71,7 +54,6 @@ a:active {
 	color: var(--color-tertiary-3);
 	text-decoration: none;
 }
-
 /* ==========================================================================
 Header Component
 ========================================================================== */
@@ -80,18 +62,40 @@ header {
 	color: var(--color-secondary-3);
 	padding: 2rem;
 }
+/* ==========================================================================
+Nav
+========================================================================== */
 nav li {
 	display: inline;
 }
-
+nav a {
+	color: var(--color-secondary-1);
+	text-decoration: none;
+}
+nav a:visited {
+	color: var(--color-secondary-1);
+	text-decoration: none;
+}
+nav a:hover {
+	color: var(--color-primary-3);
+	text-decoration: none;
+}
+nav a:active {
+	color: var(--color-tertiary-3);
+	text-decoration: none;
+}
 /* ==========================================================================
 Body Component
 ========================================================================== */
-main p {
+main {
 	max-width: 32rem;
+	margin: auto auto auto 20rem;
 }
 svg {
 	max-width: 8rem;
+}
+figure {
+	margin-right: -10rem;
 }
 /* ==========================================================================
 Footer Component
@@ -100,4 +104,13 @@ footer {
 	background-color: var(--color-primary-1);
 	color: var(--color-secondary-3);
 	padding: 2rem;
+}
+/* ==========================================================================
+Examples
+========================================================================== */
+.primary-font{
+	font-family: var(--font-primary);
+}
+.secondary-font{
+	font-family: var(--font-secondary);
 }
