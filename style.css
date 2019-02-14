@@ -1,0 +1,103 @@
+/* ==========================================================================
+Colors
+========================================================================== */
+/*light-1 medium-2 dark-3*/
+html {
+	--color-primary-1: #FFEBE0;
+	--color-primary-2: #FFC4A5;
+	--color-primary-3: #ED8E5E;
+	--color-secondary-1: #8A8CA3;
+	--color-secondary-2: #545566;
+	--color-secondary-3: #2D2E3D;
+	--color-tertiary-1: #FCFCFC;
+	--color-tertiary-2: #F7F8F9;
+	--color-tertiary-3: #E1E2E3;
+}
+
+/* ==========================================================================
+Typography
+========================================================================== */
+html {
+	--font-primary: 'Source Sans Pro', 'Open Sans', sans-serif;
+	--font-secondary: 'Raleway', 'Open Sans', sans-serif;
+	line-height: 1.4;
+}
+
+/* ==========================================================================
+Typography
+========================================================================== */
+html {
+	color: var(--color-secondary-3);
+	font-family: var(--font-primary);
+}
+h1,h2 {
+	font-family: var(--font-secondary);
+}
+.primary-font{
+	font-family: var(--font-primary);
+}
+.secondary-font{
+	font-family: var(--font-secondary);
+}
+nav a {
+	color: var(--color-secondary-1);
+	text-decoration: none;
+}
+nav a:visited {
+	color: var(--color-secondary-1);
+	text-decoration: none;
+}
+nav a:hover {
+	color: var(--color-primary-3);
+	text-decoration: none;
+}
+nav a:active {
+	color: var(--color-tertiary-3);
+	text-decoration: none;
+}
+a:link {
+	color: var(--color-primary-3);
+	text-decoration: none;
+}
+a:visited {
+	color: var(--color-secondary-1);
+	text-decoration: none;
+}
+a:hover {
+	color: var(--color-primary-2);
+	text-decoration: none;
+}
+a:active {
+	color: var(--color-tertiary-3);
+	text-decoration: none;
+}
+
+/* ==========================================================================
+Header Component
+========================================================================== */
+header {
+	background-color: var(--color-primary-1);
+	color: var(--color-secondary-3);
+	padding: 2rem;
+}
+nav li {
+	display: inline;
+}
+
+/* ==========================================================================
+Body Component
+========================================================================== */
+main p {
+	max-width: 32rem;
+}
+svg {
+	max-width: 8rem;
+}
+/* ==========================================================================
+Footer Component
+========================================================================== */
+footer {
+	background-color: var(--color-primary-1);
+	color: var(--color-secondary-3);
+	padding: 2rem;
+}
