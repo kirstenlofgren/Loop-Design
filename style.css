@@ -15,12 +15,12 @@ html {
 	--color-tertiary-2: #F7F8F9;
 	--color-tertiary-3: #E1E2E3;
 
-	--ratio:		1.414;
+	--ratio:		1.333;
 	--size-xsmall: 	calc( var(--size-small) / var(--ratio) );
 	--size-small: 	calc( var(--size-large) / var(--ratio) );
 	--size-large: 	calc( 1rem * var(--ratio) );
 	--size-xlarge: 	calc( var(--size-large) * var(--ratio) );
-	--sixe-2xlarge:	calc( var(--size-xlarge) * var(--ratio) );
+	--size-2xlarge:	calc( var(--size-xlarge) * var(--ratio) );
 	--size-3xlarge:	calc( var(--size-2xlarge) * var(--ratio) );
 	
 	--margin-ratio: 1.8;
@@ -56,69 +56,73 @@ a:active {
 	color: var(--color-tertiary-3);
 	text-decoration: none;
 }
-	/* ==========================================================================
-	Headings
-	========================================================================== */
-	h1,h2,h3,h4,h5,h6 {
-		font-family: var(--font-secondary);
-		margin: 0 0 var(--margin-large):;
-	}
-	h1 {
-		color: var(--color-primary-3);
-		font-size: var(--size-3xlarge);
-		line-height: 1;
-	}
-	h2 {
-		color: var(--color-primary-3);
-		font-size: var(--size-2xlarge);
-		line-height: 1.2;
-	}
-	h3 {
-		font-size: var(--size-xlarge);
-	}
-	h4 {
-		font-size: var(--size-large);
-	}
-	h5 {
-		font-size: 1rem;
-	}
-	h6 {
-		font-size: var(--size-small);
-	}
-
-	h1,h2 a {
-		color: var(--color-primary-2);
-		text-decoration: none;
-	}
-	h1,h2 a:visited {
-		color: var(--color-primary-2);
-		text-decoration: none;
-	}
-	h1,h2 a:hover {
-		color: var(--color-primary-1);
-		text-decoration: none;
-	}
-	h1,h2 a:active {
-		color: var(--color-tertiary-3);
-		text-decoration: none;
-	}
-
-	h3,h4,h5,h6 a {
+/*
+Headings
+*/
+h1,h2,h3,h4,h5,h6 {
+	font-family: var(--font-secondary);
+	margin: 0 0 var(--margin-large)
+}
+h1 {
+	color: var(--color-primary-3);
+	font-size: var(--size-3xlarge);
+	line-height: 1.15;
+}
+h2 {
+	color: var(--color-primary-3);
+	font-size: var(--size-2xlarge);
+	line-height: 1.25;
+}
+h3 {
+	font-size: var(--size-xlarge);
+}
+h4 {
+	font-size: var(--size-large);
+}
+h5 {
+	font-size: var(--size-small);
+}
+h6 {
+	font-size: var(--size-xsmall);
+}
+/*
+h1, h2 Links
+*/
+h1 a,h2 a {
+	color: var(--color-primary-3);
+	text-decoration: none;
+}
+h1 a,h2 a:visited {
+	color: var(--color-primary-3);
+	text-decoration: none;
+}
+h1 a,h2 a:hover {
+	color: var(--color-primary-2);
+	text-decoration: none;
+}
+h1 a,h2 a:active {
+	color: var(--color-primary-1);
+	text-decoration: none;
+}
+/*
+h3-h6 Links
+*/
+h3 a,h4 a,h5 a,h6 a {
 	color: var(--color-secondary-3);
 	text-decoration: none;
-	}
-	h3,h4,h5,h6 a:visited {
-		color: var(--color-secondary-3);
-		text-decoration: none;
-	}
-	h3,h4,h5,h6 a:hover {
-		color: var(--color-secondary-2);
-		text-decoration: none;
-	}
-	h3,h4,h5,h6 a:active {
-		color: var(--color-tertiary-3);
-		text-decoration: none;
-	}
+}
+h3 a,h4 a,h5 a,h6 a:visited {
+	color: var(--color-secondary-3);
+	text-decoration: none;
+}
+h3 a,h4 a,h5 a,h6 a:hover {
+	color: var(--color-secondary-2);
+	text-decoration: none;
+}
+h3 a, h4 a,h5 a,h6 a:active {
+	color: var(--color-tertiary-3);
+	text-decoration: none;
+}
 .featured-text {
 	color: var(--color-secondary-2);
 	font-family: var(--font-primary);
@@ -212,66 +216,4 @@ Example Classes
 .secondary-font {
 	font-family: var(--font-secondary);
 }
-	/* ==========================================================================
-	Example Headings
-	========================================================================== */
-	.head1,.head2,.head3,.head4,.head5,.head6 {
-		font-family: var(--font-secondary);
-		margin: 0 0 var(--margin-large):;
-	}
-	.head1 {
-		color: var(--color-primary-3);
-		font-size: var(--size-3xlarge);
-		line-height: 1;
-	}
-	.head2 {
-		color: var(--color-primary-3);
-		font-size: var(--size-2xlarge);
-		line-height: 1.2;
-	}
-	.head3 {
-		font-size: var(--size-xlarge);
-	}
-	.head4 {
-		font-size: var(--size-large);
-	}
-	.head5 {
-		font-size: 1rem;
-	}
-	.head6 {
-		font-size: var(--size-small);
-	}
 
-	.head1,.head2 a {
-		color: var(--color-primary-2);
-		text-decoration: none;
-	}
-	.head1,.head2 a:visited {
-		color: var(--color-primary-2);
-		text-decoration: none;
-	}
-	.head1,.head2 a:hover {
-		color: var(--color-primary-1);
-		text-decoration: none;
-	}
-	.head1,.head2 a:active {
-		color: var(--color-tertiary-3);
-		text-decoration: none;
-	}
-
-	.head3,.head4,.head5,.head6 a {
-	color: var(--color-secondary-3);
-	text-decoration: none;
-	}
-	.head3,.head4,.head5,.head6 a:visited {
-		color: var(--color-secondary-3);
-		text-decoration: none;
-	}
-	.head3,.head4,.head5,.head6 a:hover {
-		color: var(--color-secondary-2);
-		text-decoration: none;
-	}
-	.head3,.head4,.head5,.head6 a:active {
-		color: var(--color-tertiary-3);
-		text-decoration: none;
-	}
