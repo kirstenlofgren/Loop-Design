@@ -213,4 +213,66 @@ Example Classes
 .secondary-font {
 	font-family: var(--font-secondary);
 }
+/* ==========================================================================
+Button Links
+========================================================================== */
+a.hero-button, a.hero-button:visited {
+	background-color: var(--color-primary-3);
+	color: var(--color-tertiary-1);
+	display: inline-block;
+	font: var(--size-small) var(--font-secondary);
+	padding: 1rem 1.5rem;
+	text-transform: uppercase;
+}
+a.normal-button, a.normal-button:visited  {
+	background-color: var(--color-secondary-3);
+	color: var(--color-tertiary-1);
+	display: inline-block;
+	font: var(--size-small) var(--font-secondary);
+	padding: 1rem 1.5rem;
+	text-transform: uppercase;
+}
+
+a.tertiary-button, a.tertiary-button:visited  {
+	border:  .2rem solid var(--color-secondary-3);
+	color: var(--color-secondary-3);
+	display: inline-block;
+	font: var(--size-small) var(--font-secondary);
+	padding: .8rem 1.3rem;
+	text-transform: uppercase;
+}
+
+a.hero-button:hover, a.hero-button:focus {
+	background-color: var(--color-primary-2);
+	color: var(--color-secondary-3);
+}
+a.hero-button:active {
+	color: var(--color-secondary-3);
+	background-image: linear-gradient(var(--color-primary-2), var(--color-primary-1);
+
+	transition: background .5s;
+}
+
+a.normal-button:hover,a.normal-button:focus {
+	background-color: var(--color-secondary-2);
+}
+a.normal-button:active {
+
+}
+
+a.tertiary-button:hover, a.tertiary-button:focus  {
+	background-color: var(--color-secondary-3);
+	color: var(--color-tertiary-1);	
+}
+a.tertiary-button:active {
+
+}
+
+
+
+
+
+
+
+
 
