@@ -23,7 +23,7 @@ html {
 	--size-2xlarge:	calc( var(--size-xlarge) * var(--ratio) );
 	--size-3xlarge:	calc( var(--size-2xlarge) * var(--ratio) );
 	
-	--margin-ratio: 1.8;
+	--margin-ratio: 1.6;
 	--margin-small: calc( var(--margin-large) / var(--margin-ratio));
 	--margin-large: calc( 1rem * var(--margin-ratio));
 
@@ -46,22 +46,22 @@ a {
 }
 a:visited {
 	color: var(--color-primary-3);
-	text-decoration: none;
 }
 a:hover {
 	color: var(--color-primary-2);
-	text-decoration: none;
 }
 a:active {
 	color: var(--color-tertiary-3);
-	text-decoration: none;
+}
+a:focus {
+	color: var(--color-primary-2);
 }
 /*
 Headings
 */
 h1,h2,h3,h4,h5,h6 {
 	font-family: var(--font-secondary);
-	margin: 0 0 var(--margin-large)
+	margin: 0 0 var(--margin-large);
 }
 h1 {
 	color: var(--color-primary-3);
@@ -90,51 +90,46 @@ h1, h2 Links
 */
 h1 a {
 	color: var(--color-secondary-2);
-	text-decoration: none;
 }
 h1 a:visited {
 	color: var(--color-secondary-2);
-	text-decoration: none;
 }
 h1 a:hover {
 	color: var(--color-primary-2);
-	text-decoration: none;
 }
 h1 a:active {
 	color: var(--color-secondary-1);
-	text-decoration: none;
 }
 h1 a, h2 a {
 	color: var(--color-secondary-2);
-	text-decoration: none;
 }
 h1 a, h2 a:visited {
 	color: var(--color-secondary-2);
-	text-decoration: none;
 }
 h1 a, h2 a:hover {
 	color: var(--color-primary-2);
-	text-decoration: none;
 }
 h1 a, h2 a:active {
 	color: var(--color-secondary-1);
-	text-decoration: none;
 }
+/*
+Specialty Text
+*/
 .featured-text {
 	color: var(--color-secondary-2);
-	font-family: var(--font-primary);
 	font-size: var(--size-xlarge);
-}
-ol {
-	list-style-position: inside;
-	list-style-type: square;
 }
 ul {
 	list-style-position: inside;
+	list-style-type: square;
+	padding-left: 1.5rem;
+}
+ol {
+	list-style-position: inside;
+	padding-left: 1.5rem;
 }
 .tertiary-copy {
 	color: var(--color-secondary-3);
-	font-family: var(--font-primary);
 	font-size: var(--size-small);
 	line-height: 1.6;
 }
@@ -150,7 +145,8 @@ Header Component
 header {
 	background-color: var(--color-primary-1);
 	color: var(--color-secondary-1);
-	padding: 2rem;
+	margin: 0;
+	padding: 1.8rem;
 }
 .logo {
 	font-family: var(--font-secondary);
@@ -160,37 +156,46 @@ header {
 /* ==========================================================================
 Nav
 ========================================================================== */
+nav ul {
+	padding: 0;
+}
 nav li {
 	display: inline;
+	margin: .5rem 1rem .5rem 0;
+	padding: .3rem .3rem .3rem 0;
 }
 nav a {
 	color: var(--color-secondary-1);
-	text-decoration: none;
 }
 nav a:visited {
 	color: var(--color-secondary-1);
-	text-decoration: none;
 }
 nav a:hover {
 	color: var(--color-primary-3);
-	text-decoration: none;
 }
 nav a:active {
 	color: var(--color-tertiary-3);
-	text-decoration: none;
 }
 /* ==========================================================================
 Body Component
 ========================================================================== */
+body {
+	margin: 0;
+}
 main {
 	max-width: 32rem;
-	margin: auto auto auto 20rem;
+	margin: 3rem auto 20rem;
 }
 svg {
 	max-width: 8rem;
 }
-figure {
-	margin-right: -10rem;
+hr {
+	margin: 3rem 0 .5rem;
+	border-top: 1px solid var(--color-tertiary-3);
+	width: 100%;
+}
+hr.secondary-separator {
+	width: 66%;
 }
 /* ==========================================================================
 Footer Component
@@ -198,24 +203,31 @@ Footer Component
 footer {
 	background-color: var(--color-primary-1);
 	color: var(--color-secondary-3);
-	padding: 2rem;
+	padding: 1.8rem;
 }
 /* ==========================================================================
-Example Classes
+Examples
 ========================================================================== */
+figure {
+	border-left: 1px solid var(--color-tertiary-3);
+	padding-left: .5rem;
+}
 .primary-font {
 	font-family: var(--font-primary);
 }
-/*.primary-font-italic {
+.primary-font-italic {
 	font-family: var(--font-secondary);
-	font-style: italic; */
+	font-style: italic; 
 }
 .secondary-font {
 	font-family: var(--font-secondary);
 }
 /* ==========================================================================
-Button Links
+Components
 ========================================================================== */
+/*
+Button Links
+*/
 a.hero-button, a.hero-button:visited {
 	background-color: var(--color-primary-3);
 	color: var(--color-tertiary-1);
@@ -223,6 +235,19 @@ a.hero-button, a.hero-button:visited {
 	font: var(--size-small) var(--font-secondary);
 	padding: 1rem 1.5rem;
 	text-transform: uppercase;
+}
+a.hero-button:hover {
+	background-color: var(--color-primary-2);
+	color: var(--color-secondary-3);
+}
+a.hero-button:active {
+	background: linear-gradient(to left, var(--color-primary-1), var(--color-primary-2) 60%);
+	transition: all .4s ease-out;
+}
+ a.hero-button:focus {
+	background-color: var(--color-primary-1);
+	color: var(--color-secondary-3);
+	transition: background-color .4s ease-in;
 }
 a.normal-button, a.normal-button:visited  {
 	background-color: var(--color-secondary-3);
@@ -232,7 +257,17 @@ a.normal-button, a.normal-button:visited  {
 	padding: 1rem 1.5rem;
 	text-transform: uppercase;
 }
-
+a.normal-button:hover {
+	background-color: var(--color-secondary-2);
+}
+a.normal-button:active {
+	background: linear-gradient(to left, var(--color-secondary-1), var(--color-secondary-2) 60%);
+	transition: all .4s ease-out;
+}
+a.normal-button:focus {
+	background-color: var(--color-secondary-1);
+	transition: all .4s ease-out;
+}
 a.tertiary-button, a.tertiary-button:visited  {
 	border:  .2rem solid var(--color-secondary-3);
 	color: var(--color-secondary-3);
@@ -241,33 +276,64 @@ a.tertiary-button, a.tertiary-button:visited  {
 	padding: .8rem 1.3rem;
 	text-transform: uppercase;
 }
-
-a.hero-button:hover, a.hero-button:focus {
-	background-color: var(--color-primary-2);
-	color: var(--color-secondary-3);
-}
-a.hero-button:active {
-	color: var(--color-secondary-3);
-	background-image: linear-gradient(var(--color-primary-2), var(--color-primary-1);
-
-	transition: background .5s;
-}
-
-a.normal-button:hover,a.normal-button:focus {
-	background-color: var(--color-secondary-2);
-}
-a.normal-button:active {
-
-}
-
-a.tertiary-button:hover, a.tertiary-button:focus  {
+a.tertiary-button:hover {
 	background-color: var(--color-secondary-3);
+	border: none;
 	color: var(--color-tertiary-1);	
+	padding: 1rem 1.5rem;
 }
 a.tertiary-button:active {
-
+	background: linear-gradient(to left, var(--color-secondary-1), var(--color-secondary-2) 60%);
+	transition: all .4s ease-out;
+}
+a.tertiary-button:focus {
+	background-color: var(--color-secondary-1);
+	transition: all .4s ease-out;
+	border: none;
+	color: var(--color-tertiary-1);	
+	padding: 1rem 1.5rem;
+}
+/*
+Accordions
+*/
+details {
+	background-color: white;
+	border-bottom: 1px solid #ccc;
 }
 
+summary {
+	box-shadow: 1px 1px 1px #999;
+	padding: 1rem;
+}
+
+/*
+summary:focus, details[open] summary {
+	background-color: #555;
+	color: white;
+	outline: none;
+}
+
+summary::-webkit-details-marker {
+	color: transparent;
+	background-image: url(https://training.bitrix24.com/images/bullets/plus.png);
+}
+
+details[open] summary::-webkit-details-marker {
+	background-image: url(https://www.toolboxbuzz.com/wp-content/themes/ToolBoxBuzz/images/icon_specs_wrench.png);
+}
+
+details div {
+	padding: 1rem;
+}*/
+
+/* ==========================================================================
+Media Queries
+========================================================================== */
+/*media query main {
+	max-width: 70%;
+	margin:10rem auto 20rem auto;
+}
+}*/
 
 
 
