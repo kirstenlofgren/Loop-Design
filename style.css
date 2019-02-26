@@ -297,35 +297,38 @@ a.tertiary-button:focus {
 Accordions
 */
 details {
-	background-color: white;
-	border-bottom: 1px solid #ccc;
+	background-color: var(--color-tertiary-1);
 }
-
-summary {
-	box-shadow: 1px 1px 1px #999;
-	padding: 1rem;
-}
-
-/*
-summary:focus, details[open] summary {
-	background-color: #555;
-	color: white;
-	outline: none;
-}
-
-summary::-webkit-details-marker {
-	color: transparent;
-	background-image: url(https://training.bitrix24.com/images/bullets/plus.png);
-}
-
-details[open] summary::-webkit-details-marker {
-	background-image: url(https://www.toolboxbuzz.com/wp-content/themes/ToolBoxBuzz/images/icon_specs_wrench.png);
-}
-
 details div {
 	padding: 1rem;
-}*/
-
+}
+summary {
+	background-color: var(--color-primary-1);
+	list-style-image: url(arrow.svg);
+	padding: 1rem;
+}
+summary::-webkit-details-marker {
+    background: url(arrow.svg);
+    color: transparent;
+}
+details[open] summary::-webkit-details-marker {
+	background: url(arrowdown.svg);
+}
+details[open] details summary::-webkit-details-marker {
+	background: url(arrow.svg);
+}
+details[open] details[open] summary::-webkit-details-marker {
+	background: url(arrowdown.svg);
+}
+summary:focus, details[open] summary {
+	background-color: var(--color-primary-2);
+}
+summary:focus, details[open] details summary {
+	background-color: var(--color-primary-1);
+}
+summary:focus, details[open] details[open] summary {
+	background-color: var(--color-primary-2);
+}
 /* ==========================================================================
 Media Queries
 ========================================================================== */
@@ -334,6 +337,7 @@ Media Queries
 	margin:10rem auto 20rem auto;
 }
 }*/
+/*aside nav (style and components: h2s), copyright on same row, media queries, animated buttons*/
 
 
 
