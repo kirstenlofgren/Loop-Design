@@ -205,6 +205,9 @@ footer {
 	color: var(--color-secondary-3);
 	padding: 1.8rem;
 }
+footer nav {
+	text-align: center;
+}
 /* ==========================================================================
 Examples
 ========================================================================== */
@@ -329,6 +332,42 @@ summary:focus, details[open] details summary {
 summary:focus, details[open] details[open] summary {
 	background-color: var(--color-primary-2);
 }
+/*
+Modal
+*/
+@keyframes in-and-out {
+	0% {
+		border: solid var(--color-tertiary-1);
+	}
+	20% {
+		border: solid var(--color-primary-2);
+	}
+	100% {
+		border: solid var(--color-tertiary-1);
+	}
+}
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+dialog {
+	background-color: var(--color-tertiary-1);
+	border: solid var(--color-tertiary-1);;
+	margin: 0 6rem;
+	padding: 1.5rem 3rem;
+}
+dialog[open] {
+	animation: in-and-out 2s;
+
+}
+dialog::backdrop {
+	animation: fade 1s ease-out;
+	background-color: rgba(138, 140, 163, .5);
+}
 /* ==========================================================================
 Media Queries
 ========================================================================== */
@@ -338,11 +377,5 @@ Media Queries
 }
 }*/
 /*aside nav (style and components: h2s), copyright on same row, media queries, animated buttons*/
-
-
-
-
-
-
 
 

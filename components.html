@@ -115,22 +115,61 @@
 
 			</div>
 		</details>
+
+		<h2>Modal Dialog</h2>
+
+		<button id="open-modal" type="button">Open Modal</button>
+
+		<dialog id="modal-demo">
+			<h3>Modal Title</h3>
+
+			<p>Ice cream apple pie apple pie pastry chupa chups jelly. Macaroon biscuit pastry candy canes biscuit lollipop chocolate danish. Gummies halvah chocolate bar gummies. Pie dessert candy canes cake. Tootsie roll pudding icing muffin. Tart sesame snaps danish. Topping pastry tart tootsie roll. Topping muffin marshmallow gummies fruitcake wafer brownie gummi bears candy canes. Dessert sweet cake sweet pie. Caramels chocolate soufflé gummi bears pudding pastry topping. Lemon drops sesame snaps halvah pie.</p>
+
+		</dialog>
+
+
 	
 	</main>
 
 	<footer>
-		<p>Loop was created by Kirsten Lofgren</p>
+		<div class="tertiary-copy footer-text">
+			<p>Loop was created by Kirsten Lofgren</p>
 		
-		<p>Kirsten Lofgren was born and raised in east Tennessee. She grew up exploring forests on her own and hiking on mountains with her family. She moved west to explore the deserts and mountains of Utah, where she received her BFA in Studio Art from Brigham Young University in 2015. She has exhibited around the United States and in Berlin, participating in shows at the Woodbury Art Museum, the Bemis Arts Building, and The WYE among others. She now makes drawings and oil paintings in Austin, TX.</p>
-		
-		<nav>
-			<ul>
-				<li><a href="https://www.linkedin.com/in/kirstenllofgren/">LinkedIn</a></li>
-				<li><a href="https://www.instagram.com/kirstenlofgren/">Instagram</a></li>
-				<li><a href="https://kirstenlofgren.com/">Portfolio</a></li>
-			</ul>
-		</nav>
-		<p>Copyright ©2019 Kirsten Lofgren</p>
+			<p>Kirsten Lofgren was born and raised in east Tennessee. She grew up exploring forests on her own and hiking on mountains with her family. She moved west to explore the deserts and mountains of Utah, where she received her BFA in Studio Art from Brigham Young University in 2015. She has exhibited around the United States and in Berlin, participating in shows at the Woodbury Art Museum, the Bemis Arts Building, and The WYE among others. She now makes drawings and oil paintings in Austin, TX.</p>
+		</div>
+
+		<div class="footer-nav"></div>
+			<nav>
+				<ul>
+					<li><a href="https://www.linkedin.com/in/kirstenllofgren/">LinkedIn</a></li>
+					<li><a href="https://www.instagram.com/kirstenlofgren/">Instagram</a></li>
+					<li><a href="https://kirstenlofgren.com/">Portfolio</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="tertiary-copy">
+			<p>Copyright ©2019 Kirsten Lofgren</p>
+		</div>
 	</footer>
+	<script>
+		document.addEventListener('DOMContentLoaded', function(){
+
+			const modal = document.querySelector('dialog');
+			const open = document.getElementById('open-modal');
+
+			open.addEventListener('click', () => {
+				modal.showModal();
+			});
+
+			modal.addEventListener('click', event => {
+				if (event.target === modal) {
+					modal.close('cancelled');
+				}
+			});
+
+		});
+	</script>
+
 </body>
 </html>
