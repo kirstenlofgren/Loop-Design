@@ -16,8 +16,8 @@ html {
 	--color-tertiary-3: #E1E2E3;
 
 	--ratio:		1.333;
-	--size-xsmall: 	calc( var(--size-small) / var(--ratio) );
-	--size-small: 	calc( var(--size-large) / var(--ratio) );
+	--size-xsmall: 	calc( var(--size-small) / (.9 * var(--ratio) ) );
+	--size-small: 	calc( var(--size-large) / (.9 * var(--ratio) ) );
 	--size-large: 	calc( 1rem * var(--ratio) );
 	--size-xlarge: 	calc( var(--size-large) * var(--ratio) );
 	--size-2xlarge:	calc( var(--size-xlarge) * var(--ratio) );
@@ -66,7 +66,7 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
 	color: var(--color-primary-3);
 	font-size: var(--size-3xlarge);
-	line-height: 1.15;
+	line-height: 1.25;
 }
 h2 {
 	color: var(--color-primary-3);
@@ -130,7 +130,7 @@ ol {
 }
 .tertiary-copy {
 	color: var(--color-secondary-3);
-	font-size: var(--size-small);
+	font-size: var(--size-xsmall);
 	line-height: 1.6;
 }
 blockquote {
@@ -228,145 +228,167 @@ figure {
 /* ==========================================================================
 Components
 ========================================================================== */
+	/* ==========================================================================
+	Button Links
+	========================================================================== */
+		/*
+		Hero Buttons
+		*/
+			a.hero-button, a.hero-button:visited {
+				background-color: var(--color-primary-3);
+				color: var(--color-tertiary-1);
+				display: inline-block;
+				font: var(--size-small) var(--font-secondary);
+				padding: 1rem 1.5rem;
+				text-transform: uppercase;
+			}
+			a.hero-button:hover {
+				background-color: var(--color-primary-2);
+				color: var(--color-secondary-3);
+			}
+			a.hero-button:active {
+				background: linear-gradient(to left, var(--color-primary-1), var(--color-primary-2) 60%);
+				transition: all .4s ease-out;
+			}
+			 a.hero-button:focus {
+				background-color: var(--color-primary-1);
+				color: var(--color-secondary-3);
+				transition: background-color .4s ease-in;
+			}
+		/*
+		Normal Buttons
+		*/
+			a.normal-button, a.normal-button:visited  {
+				background-color: var(--color-secondary-3);
+				color: var(--color-tertiary-1);
+				display: inline-block;
+				font: var(--size-small) var(--font-secondary);
+				padding: 1rem 1.5rem;
+				text-transform: uppercase;
+			}
+			a.normal-button:hover {
+				background-color: var(--color-secondary-2);
+			}
+			a.normal-button:active {
+				background: linear-gradient(to left, var(--color-secondary-1), var(--color-secondary-2) 60%);
+				transition: all .4s ease-out;
+			}
+			a.normal-button:focus {
+				background-color: var(--color-secondary-1);
+				transition: all .4s ease-out;
+			}
+		/*
+		Tertiary Buttons
+		*/
+			a.tertiary-button, a.tertiary-button:visited  {
+				border:  .2rem solid var(--color-secondary-3);
+				color: var(--color-secondary-3);
+				display: inline-block;
+				font: var(--size-small) var(--font-secondary);
+				padding: .8rem 1.3rem;
+				text-transform: uppercase;
+			}
+			a.tertiary-button:hover {
+				background-color: var(--color-secondary-3);
+				border: none;
+				color: var(--color-tertiary-1);	
+				padding: 1rem 1.5rem;
+			}
+			a.tertiary-button:active {
+				background: linear-gradient(to left, var(--color-secondary-1), var(--color-secondary-2) 60%);
+				transition: all .4s ease-out;
+			}
+			a.tertiary-button:focus {
+				background-color: var(--color-secondary-1);
+				transition: all .4s ease-out;
+				border: none;
+				color: var(--color-tertiary-1);	
+				padding: 1rem 1.5rem;
+			}
+	/* ==========================================================================
+	Accordions
+	========================================================================== */
+		details {
+			background-color: var(--color-tertiary-1);
+		}
+		details div {
+			padding: 1rem;
+		}
+		summary {
+			background-color: var(--color-primary-1);
+			list-style-image: url(arrow.svg);
+			padding: 1rem;
+		}
+		summary::-webkit-details-marker {
+		    background: url(arrow.svg);
+		    color: transparent;
+		}
+		details[open] summary::-webkit-details-marker {
+			background: url(arrowdown.svg);
+		}
+		details[open] details summary::-webkit-details-marker {
+			background: url(arrow.svg);
+		}
+		details[open] details[open] summary::-webkit-details-marker {
+			background: url(arrowdown.svg);
+		}
+		summary:focus, details[open] summary {
+			background-color: var(--color-primary-2);
+		}
+		summary:focus, details[open] details summary {
+			background-color: var(--color-primary-1);
+		}
+		summary:focus, details[open] details[open] summary {
+			background-color: var(--color-primary-2);
+		}
+	/* ==========================================================================
+	Modal
+	========================================================================== */
+	/*
+	Keyframes*/
+	@keyframes in-and-out {
+		0% {
+			border: solid var(--color-tertiary-1);
+		}
+		20% {
+			border: solid var(--color-primary-2);
+		}
+		100% {
+			border: solid var(--color-tertiary-1);
+		} 
+	}
+	@keyframes fade {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	dialog {
+		background-color: var(--color-tertiary-1);
+		border: solid var(--color-tertiary-1);;
+		margin: 0 6rem;
+		padding: 1.5rem 3rem;
+	}
+	dialog[open] {
+		animation: in-and-out 2s;
+		max-width: 20rem;
+		margin: auto;
+	}
+	dialog::backdrop {
+		animation: fade 1s ease-out;
+		background-color: rgba(138, 140, 163, .5);
+	}
 /*
-Button Links
+Forms
 */
-a.hero-button, a.hero-button:visited {
-	background-color: var(--color-primary-3);
-	color: var(--color-tertiary-1);
-	display: inline-block;
-	font: var(--size-small) var(--font-secondary);
-	padding: 1rem 1.5rem;
-	text-transform: uppercase;
+input, textarea {
+	display: block;
+	margin-bottom: 1rem;
 }
-a.hero-button:hover {
-	background-color: var(--color-primary-2);
-	color: var(--color-secondary-3);
-}
-a.hero-button:active {
-	background: linear-gradient(to left, var(--color-primary-1), var(--color-primary-2) 60%);
-	transition: all .4s ease-out;
-}
- a.hero-button:focus {
-	background-color: var(--color-primary-1);
-	color: var(--color-secondary-3);
-	transition: background-color .4s ease-in;
-}
-a.normal-button, a.normal-button:visited  {
-	background-color: var(--color-secondary-3);
-	color: var(--color-tertiary-1);
-	display: inline-block;
-	font: var(--size-small) var(--font-secondary);
-	padding: 1rem 1.5rem;
-	text-transform: uppercase;
-}
-a.normal-button:hover {
-	background-color: var(--color-secondary-2);
-}
-a.normal-button:active {
-	background: linear-gradient(to left, var(--color-secondary-1), var(--color-secondary-2) 60%);
-	transition: all .4s ease-out;
-}
-a.normal-button:focus {
-	background-color: var(--color-secondary-1);
-	transition: all .4s ease-out;
-}
-a.tertiary-button, a.tertiary-button:visited  {
-	border:  .2rem solid var(--color-secondary-3);
-	color: var(--color-secondary-3);
-	display: inline-block;
-	font: var(--size-small) var(--font-secondary);
-	padding: .8rem 1.3rem;
-	text-transform: uppercase;
-}
-a.tertiary-button:hover {
-	background-color: var(--color-secondary-3);
-	border: none;
-	color: var(--color-tertiary-1);	
-	padding: 1rem 1.5rem;
-}
-a.tertiary-button:active {
-	background: linear-gradient(to left, var(--color-secondary-1), var(--color-secondary-2) 60%);
-	transition: all .4s ease-out;
-}
-a.tertiary-button:focus {
-	background-color: var(--color-secondary-1);
-	transition: all .4s ease-out;
-	border: none;
-	color: var(--color-tertiary-1);	
-	padding: 1rem 1.5rem;
-}
-/*
-Accordions
-*/
-details {
-	background-color: var(--color-tertiary-1);
-}
-details div {
-	padding: 1rem;
-}
-summary {
-	background-color: var(--color-primary-1);
-	list-style-image: url(arrow.svg);
-	padding: 1rem;
-}
-summary::-webkit-details-marker {
-    background: url(arrow.svg);
-    color: transparent;
-}
-details[open] summary::-webkit-details-marker {
-	background: url(arrowdown.svg);
-}
-details[open] details summary::-webkit-details-marker {
-	background: url(arrow.svg);
-}
-details[open] details[open] summary::-webkit-details-marker {
-	background: url(arrowdown.svg);
-}
-summary:focus, details[open] summary {
-	background-color: var(--color-primary-2);
-}
-summary:focus, details[open] details summary {
-	background-color: var(--color-primary-1);
-}
-summary:focus, details[open] details[open] summary {
-	background-color: var(--color-primary-2);
-}
-/*
-Modal
-*/
-@keyframes in-and-out {
-	0% {
-		border: solid var(--color-tertiary-1);
-	}
-	20% {
-		border: solid var(--color-primary-2);
-	}
-	100% {
-		border: solid var(--color-tertiary-1);
-	}
-}
-@keyframes fade {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-dialog {
-	background-color: var(--color-tertiary-1);
-	border: solid var(--color-tertiary-1);;
-	margin: 0 6rem;
-	padding: 1.5rem 3rem;
-}
-dialog[open] {
-	animation: in-and-out 2s;
+form button {
 
-}
-dialog::backdrop {
-	animation: fade 1s ease-out;
-	background-color: rgba(138, 140, 163, .5);
 }
 /* ==========================================================================
 Media Queries
