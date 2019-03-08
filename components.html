@@ -124,10 +124,13 @@
 		<form action="#">
 
 			<label for="first-name">First Name</label>
-			<input type="text" id="first-name" name="first-name">
+			<input type="text" id="first-name" name="first-name" placeholder="First">
 			
 			<label for="last-name">Last Name</label>
-			<input type="text" id="last-name" name="last-name">
+			<input type="text" id="last-name" name="last-name" placeholder="Last">
+
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email" placeholder="name@address.com">
 
 			<label for="range">Range</label>
 			<input type="range" id="range" name="range" min="4" max="12">
@@ -141,12 +144,12 @@
 			</select>
 
 			<label for="message">Message</label>
-			<textarea id="message" name="message"></textarea>
+			<textarea id="message" name="message" placeholder="Type your message here..."></textarea>
 
 			<label for="checkbox">Check all that apply</label>
-			<input type="checkbox" name="check1" value="1"><p>1</p>
-			<input type="checkbox" name="check2" value="2"><p>2</p>
-			<input type="checkbox" name="check3" value="3"><p>3</p>
+			<label><input type="checkbox" name="check1" value="1">1</label>
+			<label><input type="checkbox" name="check2" value="2">2</label>
+			<label><input type="checkbox" name="check3" value="3">3</label>
 
 			<button type="submit">Send</button>
 
@@ -177,9 +180,9 @@
 			<textarea id="message" name="message" class="error"></textarea>
 
 			<label for="checkbox">Check all that apply</label>
-			<input type="checkbox" name="check1" value="1" class="error"><p>1</p>
-			<input type="checkbox" name="check2" value="2" class="error"><p>2</p>
-			<input type="checkbox" name="check3" value="3" class="error"><p>3</p>
+			<label><input type="checkbox" name="check1" value="1" class="error">1</label>
+			<label><input type="checkbox" name="check2" value="2" class="error">2</label>
+			<label><input type="checkbox" name="check3" value="3" class="error">3</label>
 
 			<button type="submit">Send</button>
 
@@ -210,9 +213,9 @@
 			<textarea id="message" name="message" disabled></textarea>
 
 			<label for="checkbox">Check all that apply</label>
-			<input type="checkbox" name="check1" value="1" disabled><p>1</p>
-			<input type="checkbox" name="check2" value="2" disabled><p>2</p>
-			<input type="checkbox" name="check3" value="3" disabled><p>3</p>
+			<label><input type="checkbox" name="check1" value="1" disabled>1</label>
+			<label><input type="checkbox" name="check2" value="2" disabled>2</label>
+			<label><input type="checkbox" name="check3" value="3" disabled>3</label>
 
 			<button type="submit">Send</button>
 

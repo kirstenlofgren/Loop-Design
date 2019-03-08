@@ -1,230 +1,231 @@
 /* ==========================================================================
-Colors
+Variable Styles
 ========================================================================== */
-/*light-1 medium-2 dark-3*/
-html {
-	--color-primary-1: #FFEBE0;
-	--color-primary-2: #FFC4A5;
-	--color-primary-3: #ED8E5E;
+	/*light-1 medium-2 dark-3*/
+	html {
+		--color-primary-1: #FFEBE0;
+		--color-primary-2: #FFC4A5;
+		--color-primary-3: #ED8E5E;
 
-	--color-secondary-1: #8A8CA3;
-	--color-secondary-2: #545566;
-	--color-secondary-3: #2D2E3D;
+		--color-secondary-1: #8A8CA3;
+		--color-secondary-2: #545566;
+		--color-secondary-3: #2D2E3D;
 
-	--color-tertiary-1: #FCFCFC;
-	--color-tertiary-2: #F7F8F9;
-	--color-tertiary-3: #E1E2E3;
+		--color-tertiary-1: #FCFCFC;
+		--color-tertiary-2: #F7F8F9;
+		--color-tertiary-3: #E1E2E3;
 
-	--ratio:		1.333;
-	--size-xsmall: 	calc( var(--size-small) / (.9 * var(--ratio) ) );
-	--size-small: 	calc( var(--size-large) / (.9 * var(--ratio) ) );
-	--size-large: 	calc( 1rem * var(--ratio) );
-	--size-xlarge: 	calc( var(--size-large) * var(--ratio) );
-	--size-2xlarge:	calc( var(--size-xlarge) * var(--ratio) );
-	--size-3xlarge:	calc( var(--size-2xlarge) * var(--ratio) );
-	
-	--margin-ratio: 1.6;
-	--margin-small: calc( var(--margin-large) / var(--margin-ratio));
-	--margin-large: calc( 1rem * var(--margin-ratio));
+		--color-error: #FFC6BA;
 
-}
-
+		--ratio:		1.333;
+		--size-xsmall: 	calc( var(--size-small) / (.9 * var(--ratio) ) );
+		--size-small: 	calc( var(--size-large) / (.9 * var(--ratio) ) );
+		--size-large: 	calc( 1rem * var(--ratio) );
+		--size-xlarge: 	calc( var(--size-large) * var(--ratio) );
+		--size-2xlarge:	calc( var(--size-xlarge) * var(--ratio) );
+		--size-3xlarge:	calc( var(--size-2xlarge) * var(--ratio) );
+		
+		--margin-ratio: 1.6;
+		--margin-small: calc( var(--margin-large) / var(--margin-ratio));
+		--margin-large: calc( 1rem * var(--margin-ratio));
+	}
 /* ==========================================================================
 Typography
 ========================================================================== */
-html {
-	--font-primary: 'Source Sans Pro', 'Open Sans', sans-serif;
-	--font-secondary: 'Raleway', 'Open Sans', sans-serif;
-	
-	color: var(--color-secondary-3);
-	font-family: var(--font-primary);
-	line-height: 1.4;
-}
-a {
-	color: var(--color-primary-3);
-	text-decoration: none;
-}
-a:visited {
-	color: var(--color-primary-3);
-}
-a:hover {
-	color: var(--color-primary-2);
-}
-a:active {
-	color: var(--color-tertiary-3);
-}
-a:focus {
-	color: var(--color-primary-2);
-}
-/*
-Headings
-*/
-h1,h2,h3,h4,h5,h6 {
-	font-family: var(--font-secondary);
-	margin: 0 0 var(--margin-large);
-}
-h1 {
-	color: var(--color-primary-3);
-	font-size: var(--size-3xlarge);
-	line-height: 1.25;
-}
-h2 {
-	color: var(--color-primary-3);
-	font-size: var(--size-2xlarge);
-	line-height: 1.25;
-}
-h3 {
-	font-size: var(--size-xlarge);
-}
-h4 {
-	font-size: var(--size-large);
-}
-h5 {
-	font-size: var(--size-small);
-}
-h6 {
-	font-size: var(--size-xsmall);
-}
-/*
-h1, h2 Links
-*/
-h1 a {
-	color: var(--color-secondary-2);
-}
-h1 a:visited {
-	color: var(--color-secondary-2);
-}
-h1 a:hover {
-	color: var(--color-primary-2);
-}
-h1 a:active {
-	color: var(--color-secondary-1);
-}
-h1 a, h2 a {
-	color: var(--color-secondary-2);
-}
-h1 a, h2 a:visited {
-	color: var(--color-secondary-2);
-}
-h1 a, h2 a:hover {
-	color: var(--color-primary-2);
-}
-h1 a, h2 a:active {
-	color: var(--color-secondary-1);
-}
-/*
-Specialty Text
-*/
-.featured-text {
-	color: var(--color-secondary-2);
-	font-size: var(--size-xlarge);
-}
-ul {
-	list-style-position: inside;
-	list-style-type: square;
-	padding-left: 1.5rem;
-}
-ol {
-	list-style-position: inside;
-	padding-left: 1.5rem;
-}
-.tertiary-copy {
-	color: var(--color-secondary-3);
-	font-size: var(--size-xsmall);
-	line-height: 1.6;
-}
-blockquote {
-	color: var(--color-primary-3);
-	font-family: var(--font-secondary);
-	font-size: var(--size-xlarge);
-	font-style: italic;
-}
+	html {
+		--font-primary: 'Source Sans Pro', 'Open Sans', sans-serif;
+		--font-secondary: 'Raleway', 'Open Sans', sans-serif;
+		
+		color: var(--color-secondary-3);
+		font-family: var(--font-primary);
+		line-height: 1.4;
+	}
+	a {
+		color: var(--color-primary-3);
+		text-decoration: none;
+	}
+	a:visited {
+		color: var(--color-primary-3);
+	}
+	a:hover {
+		color: var(--color-primary-2);
+	}
+	a:active {
+		color: var(--color-tertiary-3);
+	}
+	a:focus {
+		color: var(--color-primary-2);
+	}
+	/* ==========================================================================
+	Headings
+	========================================================================== */
+		h1,h2,h3,h4,h5,h6 {
+			font-family: var(--font-secondary);
+			margin: 0 0 var(--margin-large);
+		}
+		h1 {
+			color: var(--color-primary-3);
+			font-size: var(--size-3xlarge);
+			line-height: 1.25;
+		}
+		h2 {
+			color: var(--color-primary-3);
+			font-size: var(--size-2xlarge);
+			line-height: 1.25;
+		}
+		h3 {
+			font-size: var(--size-xlarge);
+		}
+		h4 {
+			font-size: var(--size-large);
+		}
+		h5 {
+			font-size: var(--size-small);
+		}
+		h6 {
+			font-size: var(--size-xsmall);
+		}
+	/* ==========================================================================
+	Heading Links
+	========================================================================== */
+		h1 a {
+			color: var(--color-secondary-2);
+		}
+		h1 a:visited {
+			color: var(--color-secondary-2);
+		}
+		h1 a:hover {
+			color: var(--color-primary-2);
+		}
+		h1 a:active {
+			color: var(--color-secondary-1);
+		}
+		h1 a, h2 a {
+			color: var(--color-secondary-2);
+		}
+		h1 a, h2 a:visited {
+			color: var(--color-secondary-2);
+		}
+		h1 a, h2 a:hover {
+			color: var(--color-primary-2);
+		}
+		h1 a, h2 a:active {
+			color: var(--color-secondary-1);
+		}
+	/* ==========================================================================
+	Specialty Text
+	========================================================================== */
+		.featured-text {
+			color: var(--color-secondary-2);
+			font-size: var(--size-xlarge);
+		}
+		ul {
+			list-style-position: inside;
+			list-style-type: square;
+			padding-left: 1.5rem;
+		}
+		ol {
+			list-style-position: inside;
+			padding-left: 1.5rem;
+		}
+		.tertiary-copy {
+			color: var(--color-secondary-3);
+			font-size: var(--size-xsmall);
+			line-height: 1.6;
+		}
+		blockquote {
+			color: var(--color-primary-3);
+			font-family: var(--font-secondary);
+			font-size: var(--size-xlarge);
+			font-style: italic;
+		}
 /* ==========================================================================
 Header Component
 ========================================================================== */
-header {
-	background-color: var(--color-primary-1);
-	color: var(--color-secondary-1);
-	margin: 0;
-	padding: 1.8rem;
-}
-.logo {
-	font-family: var(--font-secondary);
-	color: var(--color-primary-3);
-	font-size: var(--size-3xlarge);
-}
+	header {
+		background-color: var(--color-primary-1);
+		color: var(--color-secondary-1);
+		margin: 0;
+		padding: 1.8rem;
+	}
+	.logo {
+		font-family: var(--font-secondary);
+		color: var(--color-primary-3);
+		font-size: var(--size-3xlarge);
+	}
 /* ==========================================================================
 Nav
 ========================================================================== */
-nav ul {
-	padding: 0;
-}
-nav li {
-	display: inline;
-	margin: .5rem 1rem .5rem 0;
-	padding: .3rem .3rem .3rem 0;
-}
-nav a {
-	color: var(--color-secondary-1);
-}
-nav a:visited {
-	color: var(--color-secondary-1);
-}
-nav a:hover {
-	color: var(--color-primary-3);
-}
-nav a:active {
-	color: var(--color-tertiary-3);
-}
+	nav ul {
+		padding: 0;
+	}
+	nav li {
+		display: inline;
+		margin: .5rem 1rem .5rem 0;
+		padding: .3rem .3rem .3rem 0;
+	}
+	nav a {
+		color: var(--color-secondary-1);
+	}
+	nav a:visited {
+		color: var(--color-secondary-1);
+	}
+	nav a:hover {
+		color: var(--color-primary-3);
+	}
+	nav a:active {
+		color: var(--color-tertiary-3);
+	}
 /* ==========================================================================
 Body Component
 ========================================================================== */
-body {
-	margin: 0;
-}
-main {
-	max-width: 32rem;
-	margin: 3rem auto 20rem;
-}
-svg {
-	max-width: 8rem;
-}
-hr {
-	margin: 3rem 0 .5rem;
-	border-top: 1px solid var(--color-tertiary-3);
-	width: 100%;
-}
-hr.secondary-separator {
-	width: 66%;
-}
+	body {
+		margin: 0;
+	}
+	main {
+		max-width: 32rem;
+		margin: 3rem auto 20rem;
+	}
+	svg {
+		max-width: 8rem;
+	}
+	hr {
+		margin: 3rem 0 .5rem;
+		border-top: 1px solid var(--color-tertiary-3);
+		width: 100%;
+	}
+	hr.secondary-separator {
+		width: 66%;
+	}
 /* ==========================================================================
 Footer Component
 ========================================================================== */
-footer {
-	background-color: var(--color-primary-1);
-	color: var(--color-secondary-3);
-	padding: 1.8rem;
-}
-footer nav {
-	text-align: center;
-}
+	footer {
+		background-color: var(--color-primary-1);
+		color: var(--color-secondary-3);
+		padding: 1.8rem;
+	}
+	footer nav {
+		text-align: center;
+	}
 /* ==========================================================================
 Examples
 ========================================================================== */
-figure {
-	border-left: 1px solid var(--color-tertiary-3);
-	padding-left: .5rem;
-}
-.primary-font {
-	font-family: var(--font-primary);
-}
-.primary-font-italic {
-	font-family: var(--font-secondary);
-	font-style: italic; 
-}
-.secondary-font {
-	font-family: var(--font-secondary);
-}
+	figure {
+		border-left: 1px solid var(--color-tertiary-3);
+		padding-left: .5rem;
+	}
+	.primary-font {
+		font-family: var(--font-primary);
+	}
+	.primary-font-italic {
+		font-family: var(--font-secondary);
+		font-style: italic; 
+	}
+	.secondary-font {
+		font-family: var(--font-secondary);
+	}
+	/* Example Headings */ 
 /* ==========================================================================
 Components
 ========================================================================== */
@@ -344,52 +345,83 @@ Components
 	/* ==========================================================================
 	Modal
 	========================================================================== */
-	/*
-	Keyframes*/
-	@keyframes in-and-out {
-		0% {
-			border: solid var(--color-tertiary-1);
+		@keyframes in-and-out {
+			0% {
+				border: solid var(--color-tertiary-1);
+			}
+			20% {
+				border: solid var(--color-primary-2);
+			}
+			100% {
+				border: solid var(--color-tertiary-1);
+			} 
 		}
-		20% {
-			border: solid var(--color-primary-2);
+		@keyframes fade {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
 		}
-		100% {
-			border: solid var(--color-tertiary-1);
-		} 
-	}
-	@keyframes fade {
-		0% {
-			opacity: 0;
+		dialog {
+			background-color: var(--color-tertiary-1);
+			border: solid var(--color-tertiary-1);;
+			margin: 0 6rem;
+			padding: 1.5rem 3rem;
 		}
-		100% {
-			opacity: 1;
+		dialog[open] {
+			animation: in-and-out 2s;
+			max-width: 20rem;
+			margin: auto;
 		}
-	}
-	dialog {
-		background-color: var(--color-tertiary-1);
-		border: solid var(--color-tertiary-1);;
-		margin: 0 6rem;
-		padding: 1.5rem 3rem;
-	}
-	dialog[open] {
-		animation: in-and-out 2s;
-		max-width: 20rem;
-		margin: auto;
-	}
-	dialog::backdrop {
-		animation: fade 1s ease-out;
-		background-color: rgba(138, 140, 163, .5);
-	}
-/*
-Forms
-*/
-input, textarea {
-	display: block;
-	margin-bottom: 1rem;
-}
-form button {
+		dialog::backdrop {
+			animation: fade 1s ease-out;
+			background-color: rgba(138, 140, 163, .5);
+		}
+	/* ==========================================================================
+	Forms
+	========================================================================== */
+		input, textarea, select {
+			display: block;
+			margin-bottom: 1rem;
+			min-width: 15rem;
+			padding: .5rem;
+		}
+		input[type="range"] {
 
-}
+		}
+		select {
+
+		}
+		textarea {
+			min-height: 10rem;
+			min-width: 20rem;
+		}
+		label {
+			display:block;
+		}
+		/* 
+		Checkboxes 
+		*/
+		input[type="checkbox"] {
+			display: inline;
+			border-radius: 0;
+		}
+
+		form button {
+			background-color: var(--color-primary-2);
+			border: none;
+			box-shadow: .5px 1px 2px var(--color-secondary-1);
+			margin: 1rem 0;
+		}
+		/* ==========================================================================
+		Form messgaes 
+		========================================================================== */
+			.error {
+			    background-color: var(--color-error);
+			}
+
 /* ==========================================================================
 Media Queries
 ========================================================================== */
@@ -398,6 +430,9 @@ Media Queries
 	margin:10rem auto 20rem auto;
 }
 }*/
-/*aside nav (style and components: h2s), copyright on same row, media queries, animated buttons*/
+/*aside nav (style and components: h2s),
+ copyright on same row, media queries, animated buttons, 
+ button push in hide replace check boxes in label, 
+ range with webkit maybe styeable css tricks article*/
 
 
