@@ -24,202 +24,217 @@
 	<main>
 		<h1>Loop Design System Components</h1>
 		
-		<hr>
-		<h2>Button Links</h2>
+		<h2 class="example-indicator">Button Links</h2>
 
-		<hr class="secondary-separator">
-		<h3>Hero Button</h3>
-		<a class="hero-button" href="#">Button</a>
+		<h3 class="example-indicator-secondary">Hero Button</h3>
+		<figure>
+			<a class="hero-button" href="#">Button</a>
+		</figure>
+
+		<h3 class="example-indicator-secondary">Normal Button</h3>
+		<figure>
+			<a class="normal-button" href="#">Button</a>
+		</figure>
 		
+		<h3 class="example-indicator-secondary">Tertiary Button</h3>
+		<figure>
+			<a class="tertiary-button" href="#">Button</a>
+		</figure>
 
-		<hr class="secondary-separator">
-		<h3>Normal Button</h3>
-		<a class="normal-button" href="#">Button</a>
+		<h2 class="example-indicator">Accordions</h2>
 		
-		
-		<hr class="secondary-separator">
-		<h3>Tertiary Button</h3>
-		<a class="tertiary-button" href="#">Button</a>
+		<figure>
+			<details>
+				<summary>Question 1</summary>
+				
+				<div>
+				
+					<p>An short answer.</p>
+				
+					<p>Some more information goes here. Lorem ipsum dolor sit amet, iusto aliquando percipitur at usu.</p>
+				
+				</div>
+			</details>
 
-		<hr>
-		<h2>Accordions</h2>
-		
-		<details>
-			<summary>Question 1</summary>
-			
-			<div>
-			
-				<p>An short answer.</p>
-			
-				<p>Some more information goes here. Lorem ipsum dolor sit amet, iusto aliquando percipitur at usu.</p>
-			
-			</div>
-		</details>
+			<details>
+				<summary>Question 2</summary>
+				
+				<div>
+				
+					<p>An short answer.</p>
+				
+					<ol>
+						<li>Suggestion list item 1</li>
+						<li>Suggestion list item 2</li>
+						<li>Suggestion list item 3</li>
+					</ol>
+				
+				</div>
+			</details>
 
-		<details>
-			<summary>Question 2</summary>
-			
-			<div>
-			
-				<p>An short answer.</p>
-			
-				<ol>
-					<li>Suggestion list item 1</li>
-					<li>Suggestion list item 2</li>
-					<li>Suggestion list item 3</li>
-				</ol>
-			
-			</div>
-		</details>
+			<details>
+				<summary>Question 3</summary>
+				
+				<div>
+				
+					<details>
+						<summary>Answer 1</summary>
+						
+						<div>
+						
+							<p>An short answer.</p>
+						
+						</div>
+					</details>
 
-		<details>
-			<summary>Question 3</summary>
-			
-			<div>
-			
-				<details>
-					<summary>Answer 1</summary>
-					
-					<div>
-					
-						<p>An short answer.</p>
-					
-					</div>
-				</details>
+					<details>
+						<summary>Answer 2</summary>
+						
+						<div>
+						
+							<p>Try these links.</p>
 
-				<details>
-					<summary>Answer 2</summary>
-					
-					<div>
-					
-						<p>Try these links.</p>
+							<ul>
+								<li><a href="#">Link 1</a></li>
+								<li><a href="#">Link 2</a></li>
+								<li><a href="#">Link 3</a></li>
+							</ul>
+						
+						</div>
+					</details>
 
-						<ul>
-							<li><a href="#">Link 1</a></li>
-							<li><a href="#">Link 2</a></li>
-							<li><a href="#">Link 3</a></li>
-						</ul>
-					
-					</div>
-				</details>
+				</div>
+			</details>
+		</figure>
 
-			</div>
-		</details>
+		<h2 class="example-indicator">Modal Dialog</h2>
 
-		<h2>Modal Dialog</h2>
+		<figure>
 
-		<button id="open-modal" type="button">Open Modal</button>
+			<button id="open-modal" type="button">Open Modal</button>
 
-		<dialog id="modal-demo">
-			<h3>Modal Title</h3>
+			<dialog id="modal-demo">
+				<h3 class="example-indicator-secondary">Modal Title</h3>
 
-			<p>Ice cream apple pie apple pie pastry chupa chups jelly. Macaroon biscuit pastry candy canes biscuit lollipop chocolate danish. Gummies halvah chocolate bar gummies. Pie dessert candy canes cake. Tootsie roll pudding icing muffin. Tart sesame snaps danish. Topping pastry tart tootsie roll. Topping muffin marshmallow gummies fruitcake wafer brownie gummi bears candy canes. Dessert sweet cake sweet pie. Caramels chocolate soufflé gummi bears pudding pastry topping. Lemon drops sesame snaps halvah pie.</p>
+				<p>Ice cream apple pie apple pie pastry chupa chups jelly. Macaroon biscuit pastry candy canes biscuit lollipop chocolate danish. Gummies halvah chocolate bar gummies. Pie dessert candy canes cake. Tootsie roll pudding icing muffin. Tart sesame snaps danish. Topping pastry tart tootsie roll. Topping muffin marshmallow gummies fruitcake wafer brownie gummi bears candy canes. Dessert sweet cake sweet pie. Caramels chocolate soufflé gummi bears pudding pastry topping. Lemon drops sesame snaps halvah pie.</p>
 
-		</dialog>
+			</dialog>
 
-		<h2>Form Inputs</h2>
+		</figure>
 
-		<h3>Working Form</h3>
+		<h2 class="example-indicator">Form Inputs</h2>
 
-		<form action="#">
+		<h3 class="example-indicator-secondary">Working Form</h3>
 
-			<label for="first-name">First Name</label>
-			<input type="text" id="first-name" name="first-name" placeholder="First">
-			
-			<label for="last-name">Last Name</label>
-			<input type="text" id="last-name" name="last-name" placeholder="Last">
+		<figure>
+			<form action="#">
 
-			<label for="email">Email</label>
-			<input type="email" id="email" name="email" placeholder="name@address.com">
+				<label for="first-name">First Name</label>
+				<input type="text" id="first-name" name="first-name" placeholder="First">
+				
+				<label for="last-name">Last Name</label>
+				<input type="text" id="last-name" name="last-name" placeholder="Last">
 
-			<label for="range">Range</label>
-			<input type="range" id="range" name="range" min="4" max="12">
-			
-			<label for="choice">Option</label>
-			<select id="choice" name="option-choice">
-				<option value="" selected disabled hidden>Select Option</option>
-				<option>Option 1</option>
-				<option>Option 2</option>
-				<option>Option 3</option>
-			</select>
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" placeholder="name@address.com">
 
-			<label for="message">Message</label>
-			<textarea id="message" name="message" placeholder="Type your message here..."></textarea>
+				<label for="range">Range</label>
+				<input type="range" id="range" name="range" min="4" max="12">
+				
+				<label for="choice">Option</label>
+				<select id="choice" name="option-choice">
+					<option value="" selected disabled hidden>Select Option</option>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select>
 
-			<label for="checkbox">Check all that apply</label>
-			<label><input type="checkbox" name="check1" value="1">1</label>
-			<label><input type="checkbox" name="check2" value="2">2</label>
-			<label><input type="checkbox" name="check3" value="3">3</label>
+				<label for="message">Message</label>
+				<textarea id="message" name="message" placeholder="Type your message here..."></textarea>
 
-			<button type="submit">Send</button>
+				<label for="checkbox">Check all that apply</label>
+				<label><input type="checkbox" name="check1" value="1">1</label>
+				<label><input type="checkbox" name="check2" value="2">2</label>
+				<label><input type="checkbox" name="check3" value="3">3</label>
 
-		</form>
+				<button type="submit">Send</button>
 
-		<h3>Error Form</h3>
+			</form>
+		</figure>
 
-		<form action="#">
+		<h3 class="example-indicator-secondary">Error Form</h3>
 
-			<label for="first-name">First Name</label>
-			<input type="text" id="first-name" name="first-name" class="error">
-			
-			<label for="last-name">Last Name</label>
-			<input type="text" id="last-name" name="last-name" class="error">
+		<figure>
 
-			<label for="range">Range</label>
-			<input type="range" id="range" name="range" min="4" max="12" class="error">
-			
-			<label for="choice">Option</label>
-			<select id="choice" name="option-choice" class="error">
-				<option value="" selected disabled hidden>Select Option</option>
-				<option>Option 1</option>
-				<option>Option 2</option>
-				<option>Option 3</option>
-			</select>
+			<form action="#">
 
-			<label for="message">Message</label>
-			<textarea id="message" name="message" class="error"></textarea>
+				<label for="first-name">First Name</label>
+				<input type="text" id="first-name" name="first-name" class="error">
+				
+				<label for="last-name">Last Name</label>
+				<input type="text" id="last-name" name="last-name" class="error">
 
-			<label for="checkbox">Check all that apply</label>
-			<label><input type="checkbox" name="check1" value="1" class="error">1</label>
-			<label><input type="checkbox" name="check2" value="2" class="error">2</label>
-			<label><input type="checkbox" name="check3" value="3" class="error">3</label>
+				<label for="range">Range</label>
+				<input type="range" id="range" name="range" min="4" max="12" class="error">
+				
+				<label for="choice">Option</label>
+				<select id="choice" name="option-choice" class="error">
+					<option value="" selected disabled hidden>Select Option</option>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select>
 
-			<button type="submit">Send</button>
+				<label for="message">Message</label>
+				<textarea id="message" name="message" class="error"></textarea>
 
-		</form>
+				<label for="checkbox">Check all that apply</label>
+				<label><input type="checkbox" name="check1" value="1" class="error">1</label>
+				<label><input type="checkbox" name="check2" value="2" class="error">2</label>
+				<label><input type="checkbox" name="check3" value="3" class="error">3</label>
 
-		<h3>Disabled Form</h3>
+				<button type="submit">Send</button>
 
-		<form action="#">
+			</form>
 
-			<label for="first-name">First Name</label>
-			<input type="text" id="first-name" name="first-name" disabled>
-			
-			<label for="last-name">Last Name</label>
-			<input type="text" id="last-name" name="last-name" disabled>
+		</figure>
 
-			<label for="range">Range</label>
-			<input type="range" id="range" name="range" min="4" max="12" disabled>
-			
-			<label for="choice">Option</label>
-			<select id="choice" name="option-choice" disabled>
-				<option value="" selected disabled hidden>Select Option</option>
-				<option>Option 1</option>
-				<option>Option 2</option>
-				<option>Option 3</option>
-			</select>
+		<h3 class="example-indicator-secondary">Disabled Form</h3>
 
-			<label for="message">Message</label>
-			<textarea id="message" name="message" disabled></textarea>
+		<figure>
 
-			<label for="checkbox">Check all that apply</label>
-			<label><input type="checkbox" name="check1" value="1" disabled>1</label>
-			<label><input type="checkbox" name="check2" value="2" disabled>2</label>
-			<label><input type="checkbox" name="check3" value="3" disabled>3</label>
+			<form action="#">
 
-			<button type="submit">Send</button>
+				<label for="first-name">First Name</label>
+				<input type="text" id="first-name" name="first-name" disabled>
+				
+				<label for="last-name">Last Name</label>
+				<input type="text" id="last-name" name="last-name" disabled>
 
-		</form>
+				<label for="range">Range</label>
+				<input type="range" id="range" name="range" min="4" max="12" disabled>
+				
+				<label for="choice">Option</label>
+				<select id="choice" name="option-choice" disabled>
+					<option value="" selected disabled hidden>Select Option</option>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select>
+
+				<label for="message">Message</label>
+				<textarea id="message" name="message" disabled></textarea>
+
+				<label for="checkbox">Check all that apply</label>
+				<label><input type="checkbox" name="check1" value="1" disabled>1</label>
+				<label><input type="checkbox" name="check2" value="2" disabled>2</label>
+				<label><input type="checkbox" name="check3" value="3" disabled>3</label>
+
+				<button type="submit">Send</button>
+
+			</form>
+
+		</figure>
 	</main>
 
 	<footer>
