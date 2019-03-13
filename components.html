@@ -119,7 +119,6 @@
 				<p>Ice cream apple pie apple pie pastry chupa chups jelly. Macaroon biscuit pastry candy canes biscuit lollipop chocolate danish. Gummies halvah chocolate bar gummies. Pie dessert candy canes cake. Tootsie roll pudding icing muffin. Tart sesame snaps danish. Topping pastry tart tootsie roll. Topping muffin marshmallow gummies fruitcake wafer brownie gummi bears candy canes. Dessert sweet cake sweet pie. Caramels chocolate soufflé gummi bears pudding pastry topping. Lemon drops sesame snaps halvah pie.</p>
 
 			</dialog>
-
 		</figure>
 
 		<h2 class="example-indicator">Form Inputs</h2>
@@ -130,32 +129,45 @@
 			<form action="#">
 
 				<label for="first-name">First Name</label>
-				<input type="text" id="first-name" name="first-name" placeholder="First">
+				<input required type="text" id="first-name" name="first-name" placeholder="First">
 				
 				<label for="last-name">Last Name</label>
-				<input type="text" id="last-name" name="last-name" placeholder="Last">
+				<input required type="text" id="last-name" name="last-name" placeholder="Last">
 
 				<label for="email">Email</label>
-				<input type="email" id="email" name="email" placeholder="name@address.com">
+				<input required type="email" id="email" name="email" placeholder="name@address.com">
 
 				<label for="range">Range</label>
-				<input type="range" id="range" name="range" min="4" max="12">
+				<input type="range" id="range" name="range" min="4" max="13">
+				<p class="helper-text">Rate on a scale of 1-10</p>
 				
 				<label for="choice">Option</label>
-				<select id="choice" name="option-choice">
-					<option value="" selected disabled hidden>Select Option</option>
-					<option>Option 1</option>
-					<option>Option 2</option>
-					<option>Option 3</option>
-				</select>
+				
+				<div class="custom-select primary-select">
+					<select required id="choice" name="option-choice">
+						<option value="" selected disabled hidden>Select Option</option>
+						<option>Option 1</option>
+						<option>Option 2</option>
+						<option>Option 3</option>
+					</select>
+				</div>
+				<p class="helper-text">Select only one option from the list</p>
 
 				<label for="message">Message</label>
 				<textarea id="message" name="message" placeholder="Type your message here..."></textarea>
+				<div>
+					<label for="checkbox">Check all that apply</label>
+				
+					<!--<div class="box">
+						<label class="box-label"><span class="box-style"><input type="checkbox" name="check1" value="1" checked></span>1</label>
+					</div>-->
 
-				<label for="checkbox">Check all that apply</label>
-				<label><input type="checkbox" name="check1" value="1">1</label>
-				<label><input type="checkbox" name="check2" value="2">2</label>
-				<label><input type="checkbox" name="check3" value="3">3</label>
+					<!--<label class="box box-check">1<input type="checkbox" name="check1" value="1"><span class="custom-box"></span></label>-->
+
+					<label class="indicator"><input type="checkbox" name="check1" value="1">1</label>
+					<label class="indicator"><input type="checkbox" name="check2" value="2">2</label>
+					<label class="indicator"><input type="checkbox" name="check3" value="3">3</label>
+				</div>
 
 				<button type="submit">Send</button>
 
@@ -169,29 +181,34 @@
 			<form action="#">
 
 				<label for="first-name">First Name</label>
-				<input type="text" id="first-name" name="first-name" class="error">
+				<input required type="text" id="first-name" name="first-name" class="error">
 				
 				<label for="last-name">Last Name</label>
-				<input type="text" id="last-name" name="last-name" class="error">
+				<input required type="text" id="last-name" name="last-name" class="error">
+
+				<label for="email">Email</label>
+				<input required type="email" id="email" name="email" placeholder="name@address.com">
 
 				<label for="range">Range</label>
-				<input type="range" id="range" name="range" min="4" max="12" class="error">
+				<input type="range" id="range" name="range" min="4" max="13" class="error">
+				<p class="helper-text">Rate on a scale of 1-10</p>
 				
 				<label for="choice">Option</label>
-				<select id="choice" name="option-choice" class="error">
+				<select required id="choice" name="option-choice" class="error">
 					<option value="" selected disabled hidden>Select Option</option>
 					<option>Option 1</option>
 					<option>Option 2</option>
 					<option>Option 3</option>
 				</select>
+				<p class="helper-text">Select only one option from the list</p>
 
 				<label for="message">Message</label>
 				<textarea id="message" name="message" class="error"></textarea>
 
 				<label for="checkbox">Check all that apply</label>
-				<label><input type="checkbox" name="check1" value="1" class="error">1</label>
-				<label><input type="checkbox" name="check2" value="2" class="error">2</label>
-				<label><input type="checkbox" name="check3" value="3" class="error">3</label>
+				<label class="indicator error"><input type="checkbox" name="check1" value="1">1</label>
+				<label class="indicator error"><input type="checkbox" name="check2" value="2">2</label>
+				<label class="indicator error"><input type="checkbox" name="check3" value="3">3</label>
 
 				<button type="submit">Send</button>
 
@@ -206,29 +223,34 @@
 			<form action="#">
 
 				<label for="first-name">First Name</label>
-				<input type="text" id="first-name" name="first-name" disabled>
+				<input required type="text" id="first-name" name="first-name" disabled>
 				
 				<label for="last-name">Last Name</label>
-				<input type="text" id="last-name" name="last-name" disabled>
+				<input required type="text" id="last-name" name="last-name" disabled>
+
+				<label for="email">Email</label>
+				<input required type="email" id="email" name="email" placeholder="name@address.com">
 
 				<label for="range">Range</label>
-				<input type="range" id="range" name="range" min="4" max="12" disabled>
+				<input type="range" id="range" name="range" min="4" max="13" disabled>
+				<p class="helper-text">Rate on a scale of 1-10</p>
 				
 				<label for="choice">Option</label>
-				<select id="choice" name="option-choice" disabled>
+				<select required id="choice" name="option-choice" disabled>
 					<option value="" selected disabled hidden>Select Option</option>
 					<option>Option 1</option>
 					<option>Option 2</option>
 					<option>Option 3</option>
 				</select>
+				<p class="helper-text">Select only one option from the list</p>
 
 				<label for="message">Message</label>
 				<textarea id="message" name="message" disabled></textarea>
 
 				<label for="checkbox">Check all that apply</label>
-				<label><input type="checkbox" name="check1" value="1" disabled>1</label>
-				<label><input type="checkbox" name="check2" value="2" disabled>2</label>
-				<label><input type="checkbox" name="check3" value="3" disabled>3</label>
+				<label class="indicator"><input type="checkbox" name="check1" value="1" disabled>1</label>
+				<label class="indicator"><input type="checkbox" name="check2" value="2" disabled>2</label>
+				<label class="indicator"><input type="checkbox" name="check3" value="3" disabled>3</label>
 
 				<button type="submit">Send</button>
 

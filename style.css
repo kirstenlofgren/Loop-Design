@@ -388,15 +388,10 @@ Components
 	========================================================================== */
 		input, textarea, select {
 			display: block;
-			margin-bottom: 1rem;
+			font-size: var(--size-xsmall);
+			margin: .25rem 0 1.5rem 0;
 			min-width: 15rem;
-			padding: .5rem;
-		}
-		input[type="range"] {
-
-		}
-		select {
-
+			padding: 1rem;
 		}
 		textarea {
 			min-height: 10rem;
@@ -405,27 +400,165 @@ Components
 		label {
 			display:block;
 		}
+		.helper-text {
+			color: var(--color-secondary-1);
+			font-size: var(--size-xsmall);
+			margin: -1.25rem 0 1.5rem;
+		}
+		/*
+		Range
+
+		input[type="range"] {
+
+		}
+		*/
+		/*
+		Select 
+		*/
+			.custom-select {
+				background: url(arrow.svg) no-repeat 96%;
+				background-color: var(--color-primary-1);
+				height: 2.8rem;
+				margin-bottom: 1.5rem;
+				overflow: hidden;
+				width: 15rem;
+			}
+			.custom-select select {
+				background: transparent;
+				border: none;
+				height: 2.8rem;
+				width: 16rem;
+			}
 		/* 
 		Checkboxes 
 		*/
-		input[type="checkbox"] {
-			display: inline;
-			border-radius: 0;
-		}
-
-		form button {
-			background-color: var(--color-primary-2);
-			border: none;
-			box-shadow: .5px 1px 2px var(--color-secondary-1);
-			margin: 1rem 0;
-		}
-		/* ==========================================================================
-		Form messgaes 
-		========================================================================== */
-			.error {
-			    background-color: var(--color-error);
+			input[type="checkbox"] {
+				background-color: var(--color-primary-1);
+				display: inline;
+				height: 1rem;
+				margin: .5rem .75rem .5rem .5rem;
+				width: 1rem;
 			}
+			.indicator {
+				background-color: var(--color-primary-1);
+				height: 2rem;
+				margin: .25rem 0 .75rem 0;
+				padding: .5rem;
+				width: 15rem;
+			}
+		/* Checkbox Attempts
+			.box {
+				height: 1rem;
+				margin-bottom: 1.5rem;
+				display: inline;
+				width: 1rem;
+			}
+			.box input[type="checkbox"] {
+				background: transparent;
+				border: none;
+				display: none;
+				height: 2rem;
+				width: 2rem;
+				margin: 0;
+			}
+			.box-label {
+				cursor: pointer;
+				display: inline;
+				padding: .25;
+			}
+			.box-style {
+				background: var(--color-primary-1);
+				margin: 0 1rem 0 0;
+				padding: .25rem 1rem;
+			}
+			.box-style:checked {
+				background: var(--color-primary-2);
+			}
+			[type="checkbox"]:not(:checked)*/
 
+			/*[type="checkbox"]:checked,
+			[type="checkbox"]:not(:checked) {
+			position: absolute;
+			left: -9999px;
+			}
+			[type="checkbox"]:checked + label,
+			[type="checkbox"]:not(:checked) + label
+			{
+			position: relative;
+			padding-left: 28px;
+			cursor: pointer;
+			line-height: 20px;
+			display: inline-block;
+			color: #666;
+			}
+			[type="checkbox"]:checked + label:before,
+			[type="checkbox"]:not(:checked) + label:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 18px;
+			height: 18px;
+			border: 1px solid #ddd;
+			background: #FFEBE0;
+			}
+			[type="checkbox"]:checked + label:after,
+			[type="checkbox"]:not(:checked) + label:after {
+			content: '';
+			width: 16px;
+			height: 16px;
+			background: #FFC4A5;
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			-webkit-transition: all 0.2s ease;
+			transition: all 0.2s ease;
+			}
+			[type="checkbox"]:not(:checked) + label:after {
+			opacity: 0;
+			-webkit-transform: scale(0);
+			transform: scale(0);
+			}
+			[type="checkbox"]:checked + label:after {
+			opacity: 1;
+			-webkit-transform: scale(1);
+			transform: scale(1);
+			}
+		*/
+		/*
+		Submit / Button
+		*/
+			form button, input[type="submit"] {
+				background-color: var(--color-primary-3);
+				border: none;
+				box-shadow: .5px 1px 2px var(--color-secondary-1);
+				color: var(--color-tertiary-1);
+				font-size: var(--size-xsmall);
+				margin: 1rem 0;
+				padding: 1rem 1.5rem;
+				text-transform: uppercase;
+			}
+			form button:hover, input[type="submit"]:hover {
+				background-color: var(--color-primary-2);
+				color: var(--color-secondary-3);
+			}
+			form button:focus, input[type="submit"]:focus {
+				background-color: var(--color-primary-2);
+				color: var(--color-secondary-3);
+				outline: none;
+			}
+			form button:active, input[type="submit"]:active {
+				background-color: var(--color-primary-1);
+				color: var(--color-secondary-3);
+				box-shadow: 0 .5px 1.5px var(--color-secondary-1);
+				transition: all .5s;
+			}
+	/* ==========================================================================
+	Form messgaes 
+	========================================================================== */
+		.error {
+		    background-color: var(--color-error);
+		}
 /* ==========================================================================
 Media Queries
 ========================================================================== */
