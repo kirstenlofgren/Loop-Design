@@ -4,17 +4,17 @@
 	<meta charset="utf-8">
 	<title>Style</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Raleway:500|Source+Sans+Pro:400,400i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:500|Source+Sans+Pro:400,400i,600" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header>
 		<div class="logo"><a href="index.html">Loop</a></div>
 
-		<nav>
+		<nav class="primary-nav">
 			<ul>
 				<li><a href="index.html">Home</a></li>
-				<li><a href="style.html">Style</a></li>
+				<li><a href="style.html" class="current-page">Style</a></li>
 				<li><a href="components.html">Components</a></li>
 				<li><a href="layout.html">Layout</a></li>
 			</ul>
@@ -25,10 +25,8 @@
 		<h1>Loop Styles</h1>
 		
 		<section>
-
 			
-			<h2 class="example-indicator">Color Pallette</h2>
-			
+			<h2 class="example-indicator">Color Pallette</h2>	
 			
 			<h3 class="example-indicator-secondary">Brand Colors</h3>
 
@@ -163,22 +161,22 @@
 			<figure>
 
 				<h1>Heading 1</h1>
-				<h1>This is what a multiple line heading 1 looks like when it contains <a href="#">a link.</a> Lorem ipsum dolor sit amet, quis brute invenire usu ex.</h1>
+				<h1>Heading 1 with <a href="#">a link.</a></h1>
 				
 				<h2>Heading 2</h2>
-				<h2>This is what a multiple line heading 2 looks like when it contains <a href="#">a link.</a> Lorem ipsum dolor sit amet, quis brute invenire usu ex.</h2>
+				<h2>Multiple line heading 2 with <a href="#">a link.</a></h2>
 				
 				<h3>Heading 3</h3>
-				<h3>This is what a multiple line heading 3 looks like when it contains <a href="#">a link.</a> Lorem ipsum dolor sit amet, quis brute invenire usu ex.</h3>
+				<h3>This is what a multiple line heading 3 looks like with <a href="#">a link.</a></h3>
 
 				<h4>Heading 4</h4>
-				<h4>This is what a multiple line heading 4 looks like when it contains <a href="#">a link.</a> Lorem ipsum dolor sit amet, quis brute invenire usu ex.</h4>
+				<h4>This is what a multiple line heading 4 looks like when it contains <a href="#">a link.</a></h4>
 
 				<h5>Heading 5</h5>
-				<h5>This is what a multiple line heading 5 looks like when it contains <a href="#">a link.</a> Lorem ipsum dolor sit amet, quis brute invenire usu ex.</h5>
+				<h5>This is what a multiple line heading 5 looks like when it contains <a href="#">a link.</a></h5>
 
 				<h6>Heading 6</h6>
-				<h6>This is what a multiple line heading 6 looks like when it contains <a href="#">a link.</a> Lorem ipsum dolor sit amet, quis brute invenire usu ex.</h6>
+				<h6>This is what a multiple line heading 6 looks like when it contains <a href="#">a link.</a></h6>
 
 			</figure>
 			
@@ -187,13 +185,13 @@
 			<h4>Featured Text</h4>
 
 			<figure>
-			<p class="featured-text">Lorem ipsum dolor sit amet, iusto aliquando percipitur at usu, has <a href="#">enim denique</a> ei. Per ad propriae ocurreret, dicta postulant te nam. Quaestio aliquando persequeris mel in. Vix ex <stong>posse porro</stong> conclusionemque, erat voluptua prodesset in est. An usu <em>minim quaestio senserit</em>, magna pericula ne mei.</p>
+			<p class="featured-text">Lorem ipsum dolor has <a href="#">enim denique</a> ei. Vix ex <strong>posse porro</strong> conclusionemque. An usu <em>minim quaestio senserit</em>, magna pericula.</p>
 			</figure>
 
 			<h4>Regular Body Copy</h4>
 
 			<figure>
-			<p>Lorem ipsum dolor sit amet, iusto aliquando percipitur at usu, has <a href="#">enim denique</a> ei. Per ad propriae ocurreret, dicta postulant te nam. Quaestio aliquando persequeris mel in. Vix ex <stong>posse porro</stong> conclusionemque, erat voluptua prodesset in est. An usu <em>minim quaestio senserit</em>, magna pericula ne mei.</p>
+			<p>Lorem ipsum dolor has <a href="#">enim denique</a> ei. Vix ex <strong>posse porro</strong> conclusionemque. An usu <em>minim quaestio senserit</em>, magna pericula.</p>
 			</figure>
 
 			<h4>Unordered Lists</h4>
@@ -235,7 +233,7 @@
 			<h4>Tertiary Copy</h4>
 			
 			<figure>	
-			<p class="tertiary-copy">Lorem ipsum dolor sit amet, iusto aliquando percipitur at usu, has <a href="#">enim denique</a> ei. Per ad propriae ocurreret, dicta postulant te nam. Quaestio aliquando persequeris mel in. Vix ex <stong>posse porro</stong> conclusionemque, erat voluptua prodesset in est. An usu <em>minim quaestio senserit</em>, magna pericula ne mei.</p>
+			<p class="tertiary-copy">Lorem ipsum dolor has <a href="#">enim denique</a> ei. Vix ex <strong>posse porro</strong> conclusionemque. An usu <em>minim quaestio senserit</em>, magna pericula.</p>
 			</figure>
 			
 			<h3 class="example-indicator-secondary">Block Quotes</h3>
@@ -248,7 +246,7 @@
 		</section>	
 	</main>
 
-	<footer>
+	<footer class="primary-nav">
 		<p>Loop was created by Kirsten Lofgren</p>
 
 		<p>Kirsten Lofgren was born and raised in east Tennessee. She grew up exploring forests on her own and hiking on mountains with her family. She moved west to explore the deserts and mountains of Utah, where she received her BFA in Studio Art from Brigham Young University in 2015. She has exhibited around the United States and in Berlin, participating in shows at the Woodbury Art Museum, the Bemis Arts Building, and The WYE among others. She now makes drawings and oil paintings in Austin, TX.</p>

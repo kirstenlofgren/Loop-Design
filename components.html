@@ -4,18 +4,18 @@
 	<meta charset="utf-8">
 	<title>Components</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Raleway:500|Source+Sans+Pro:400,400i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:500|Source+Sans+Pro:400,400i,600" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header>
 		<div class="logo">Loop</div>
 
-		<nav>
+		<nav class="primary-nav">
 			<ul>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="style.html">Style</a></li>
-				<li><a href="components.html">Components</a></li>
+				<li><a href="components.html" class="current-page">Components</a></li>
 				<li><a href="layout.html">Layout</a></li>
 			</ul>
 		</nav>
@@ -24,24 +24,24 @@
 	<main>
 		<h1>Loop Design System Components</h1>
 		
-		<h2 class="example-indicator">Button Links</h2>
+		<h2 class="example-indicator" id="button-links">Button Links</h2>
 
-		<h3 class="example-indicator-secondary">Hero Button</h3>
+		<h3 class="example-indicator-secondary" id="hero-button">Hero Button</h3>
 		<figure>
 			<a class="hero-button" href="#">Button</a>
 		</figure>
 
-		<h3 class="example-indicator-secondary">Normal Button</h3>
+		<h3 class="example-indicator-secondary" id="normal-button">Normal Button</h3>
 		<figure>
 			<a class="normal-button" href="#">Button</a>
 		</figure>
 		
-		<h3 class="example-indicator-secondary">Tertiary Button</h3>
+		<h3 class="example-indicator-secondary" id="tertiary-button">Tertiary Button</h3>
 		<figure>
 			<a class="tertiary-button" href="#">Button</a>
 		</figure>
 
-		<h2 class="example-indicator">Accordions</h2>
+		<h2 class="example-indicator" id="accordions">Accordions</h2>
 		
 		<figure>
 			<details>
@@ -107,7 +107,7 @@
 			</details>
 		</figure>
 
-		<h2 class="example-indicator">Modal Dialog</h2>
+		<h2 class="example-indicator" id="modal-dialog">Modal Dialog</h2>
 
 		<figure>
 
@@ -121,28 +121,27 @@
 			</dialog>
 		</figure>
 
-		<h2 class="example-indicator">Form Inputs</h2>
+		<h2 class="example-indicator" id="form-inputs">Form Inputs</h2>
 
-		<h3 class="example-indicator-secondary">Working Form</h3>
+		<h3 class="example-indicator-secondary" id="working-form">Working Form</h3>
 
 		<figure>
 			<form action="#">
 
-				<label for="first-name">First Name</label>
+				<label for="first-name">First Name *</label>
 				<input required type="text" id="first-name" name="first-name" placeholder="First">
 				
-				<label for="last-name">Last Name</label>
+				<label for="last-name">Last Name *</label>
 				<input required type="text" id="last-name" name="last-name" placeholder="Last">
 
-				<label for="email">Email</label>
-				<input required type="email" id="email" name="email" placeholder="name@address.com">
+				<label for="email">Email *</label>
+				<input required type="email" id="email" name="email" placeholder="Email">
 
 				<label for="range">Range</label>
 				<input type="range" id="range" name="range" min="4" max="13">
 				<p class="helper-text">Rate on a scale of 1-10</p>
 				
-				<label for="choice">Option</label>
-				
+				<label for="choice">Option *</label>
 				<div class="custom-select primary-select">
 					<select required id="choice" name="option-choice">
 						<option value="" selected disabled hidden>Select Option</option>
@@ -186,26 +185,29 @@
 			</form>
 		</figure>
 
-		<h3 class="example-indicator-secondary">Error Form</h3>
+		<h3 class="example-indicator-secondary" id="error-form">Error Form</h3>
 
 		<figure>
 
 			<form action="#">
 
-				<label for="first-name">First Name</label>
-				<input required type="text" id="first-name" name="first-name" class="error">
+				<label for="first-name">First Name *</label>
+				<input required type="text" id="first-name" name="first-name" class="error" placeholder="First">
+				<div class="error-message">First name is a required field.</div>
 				
-				<label for="last-name">Last Name</label>
-				<input required type="text" id="last-name" name="last-name" class="error">
+				<label for="last-name">Last Name *</label>
+				<input required type="text" id="last-name" name="last-name" class="error" placeholder="Last">
+				<div class="error-message">Last name is a required field.</div>
 
-				<label for="email">Email</label>
-				<input required type="email" id="email" name="email" placeholder="name@address.com">
+				<label for="email">Email *</label>
+				<input required type="email" id="email" name="email" class="error" placeholder="Email">
+				<div class="error-message">Please enter your email address in the format: yourname@example.com</div>
 
 				<label for="range">Range</label>
 				<input type="range" id="range" name="range" min="4" max="13" class="error">
 				<p class="helper-text">Rate on a scale of 1-10</p>
 				
-				<label for="choice">Option</label>
+				<label for="choice">Option *</label>
 				<select required id="choice" name="option-choice" class="error">
 					<option value="" selected disabled hidden>Select Option</option>
 					<option>Option 1</option>
@@ -213,9 +215,11 @@
 					<option>Option 3</option>
 				</select>
 				<p class="helper-text">Select only one option from the list</p>
+				<div class="error-message">Option is a required field.</div>
 
-				<label for="message">Message</label>
-				<textarea id="message" name="message" class="error"></textarea>
+				<label for="message">Message *</label>
+				<textarea id="message" name="message" class="error" placeholder="Type your message here.."></textarea>
+				<div class="error-message">Message is a required field.</div>
 
 				<label for="checkbox">Check all that apply</label>
 				<label class="indicator error"><input type="checkbox" name="check1" value="1">1</label>
@@ -228,26 +232,26 @@
 
 		</figure>
 
-		<h3 class="example-indicator-secondary">Disabled Form</h3>
+		<h3 class="example-indicator-secondary" id="disabled-form">Disabled Form</h3>
 
 		<figure>
 
 			<form action="#">
 
-				<label for="first-name">First Name</label>
-				<input required type="text" id="first-name" name="first-name" disabled>
+				<label for="first-name">First Name *</label>
+				<input required type="text" id="first-name" name="first-name" disabled placeholder="First">
 				
-				<label for="last-name">Last Name</label>
-				<input required type="text" id="last-name" name="last-name" disabled>
+				<label for="last-name">Last Name *</label>
+				<input required type="text" id="last-name" name="last-name" disabled placeholder="Last">
 
-				<label for="email">Email</label>
-				<input required type="email" id="email" name="email" placeholder="name@address.com">
+				<label for="email">Email *</label>
+				<input required type="email" id="email" name="email" placeholder="Email">
 
 				<label for="range">Range</label>
 				<input type="range" id="range" name="range" min="4" max="13" disabled>
 				<p class="helper-text">Rate on a scale of 1-10</p>
 				
-				<label for="choice">Option</label>
+				<label for="choice">Option *</label>
 				<select required id="choice" name="option-choice" disabled>
 					<option value="" selected disabled hidden>Select Option</option>
 					<option>Option 1</option>
@@ -257,7 +261,7 @@
 				<p class="helper-text">Select only one option from the list</p>
 
 				<label for="message">Message</label>
-				<textarea id="message" name="message" disabled></textarea>
+				<textarea id="message" name="message" disabled placeholder="Type your message here.."></textarea>
 
 				<label for="checkbox">Check all that apply</label>
 				<label class="indicator"><input type="checkbox" name="check1" value="1" disabled>1</label>
@@ -269,28 +273,96 @@
 			</form>
 
 		</figure>
+
+		<h2 class="example-indicator" id="navigation">Navigation</h2>
+
+		<h3 class="example-indicator-secondary" id="primary-navigation">Primary Navigation</h3>
+
+		<figure>
+			<nav class="primary-nav">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Style</a></li>
+					<li><a href="#">Components</a></li>
+					<li><a href="#">Layout</a></li>
+				</ul>
+			</nav>
+		</figure>
+
+		<h3 class="example-indicator-secondary" id="secondary-navigation">Secondary Navigation</h3>
+
+		<figure>
+			<nav class="secondary-nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="style.html">Style</a></li>
+					<li><a href="components.html" class="current-page">Components</a></li>
+					<li><a href="layout.html">Layout</a></li>
+				</ul>
+			</nav>
+		</figure>
+
+		<h3 class="example-indicator-secondary">Tertiary Navingation</h3>
+		
+		<figure>
+			<nav class="side-nav">
+				<ul>
+					<li><a href="#button-links">Button Links</a>
+						<ul>
+							<li><a href="#hero-button">Hero Button</a></li>
+							<li><a href="#normal-button">Normal Button</a></li>
+							<li><a href="#tertiary-button">Tertiary Button</a></li>
+						</ul>
+					</li>
+					<li><a href="#accordions">Accordions</a></li>
+					<li><a href="#modal-dialog">Modal Dialog</a></li>
+					<li><a href="#form-inputs">Form Inputs</a>
+						<ul>
+							<li><a href="#working-form">Working Form</a></li>
+							<li><a href="#error-form">Error Form</a></li>
+							<li><a href="#disabled-form">Disabled Form</a></li>
+						</ul>
+					</li>
+					<li><a href="#navigation">Navigation</a>
+						<ul>
+							<li><a href="#primary-navigation">Primary Navigation</a></li>
+							<li><a href="#secondary-navigation">Secondary Navigation</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</figure>
 	</main>
 
 	<footer>
+
+		<nav class="secondary-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="style.html">Style</a></li>
+				<li><a href="components.html" class="current-page">Components</a></li>
+				<li><a href="layout.html">Layout</a></li>
+			</ul>
+		</nav>
+
 		<div class="tertiary-copy footer-text">
 			<p>Loop was created by Kirsten Lofgren</p>
 		
 			<p>Kirsten Lofgren was born and raised in east Tennessee. She grew up exploring forests on her own and hiking on mountains with her family. She moved west to explore the deserts and mountains of Utah, where she received her BFA in Studio Art from Brigham Young University in 2015. She has exhibited around the United States and in Berlin, participating in shows at the Woodbury Art Museum, the Bemis Arts Building, and The WYE among others. She now makes drawings and oil paintings in Austin, TX.</p>
 		</div>
-
-		<div class="footer-nav"></div>
-			<nav>
-				<ul>
-					<li><a href="https://www.linkedin.com/in/kirstenllofgren/">LinkedIn</a></li>
-					<li><a href="https://www.instagram.com/kirstenlofgren/">Instagram</a></li>
-					<li><a href="https://kirstenlofgren.com/">Portfolio</a></li>
-				</ul>
-			</nav>
+		
+		<div class="footer-links">
+			<ul class="primary-nav">
+				<li><a href="https://www.linkedin.com/in/kirstenllofgren/">LinkedIn</a></li>
+				<li><a href="https://www.instagram.com/kirstenlofgren/">Instagram</a></li>
+				<li><a href="https://kirstenlofgren.com/">Portfolio</a></li>
+			</ul>
 		</div>
 
-		<div class="tertiary-copy">
+		<div class="tertiary-copy copy-text">
 			<p>Copyright ©2019 Kirsten Lofgren</p>
 		</div>
+
 	</footer>
 	<script>
 		document.addEventListener('DOMContentLoaded', function(){

@@ -1,6 +1,13 @@
 /* ==========================================================================
 Variable Styles
 ========================================================================== */
+	/*
+	620 -unwrap or scale up figures
+	1220 -show side bar  and shift over
+	1500 -grow side bar 
+	1700 -shift left to decrease aide margin
+	*/
+
 	/*light-1 medium-2 dark-3*/
 	html {
 		--color-primary-1: #FFEBE0;
@@ -15,9 +22,10 @@ Variable Styles
 		--color-tertiary-2: #F7F8F9;
 		--color-tertiary-3: #E1E2E3;
 
-		--color-error: #FFC6BA;
+		--color-error-1: #FDCFCF;
+		--color-error-2: #F94F4F;
 
-		--ratio:		1.333;
+		--ratio:		1.250;
 		--size-xsmall: 	calc( var(--size-small) / (.9 * var(--ratio) ) );
 		--size-small: 	calc( var(--size-large) / (.9 * var(--ratio) ) );
 		--size-large: 	calc( 1rem * var(--ratio) );
@@ -28,6 +36,7 @@ Variable Styles
 		--margin-ratio: 1.6;
 		--margin-small: calc( var(--margin-large) / var(--margin-ratio));
 		--margin-large: calc( 1rem * var(--margin-ratio));
+		--margin-xlarge: calc(var(--margin-large) * var(--margin-ratio));
 	}
 /* ==========================================================================
 Typography
@@ -40,28 +49,55 @@ Typography
 		font-family: var(--font-primary);
 		line-height: 1.4;
 	}
-	a {
-		color: var(--color-primary-3);
-		text-decoration: none;
+
+	@media (min-width: 620px) {
+	
+		html {
+			line-height: 1.5;
+			--margin-ratio: 1.8;
+			--ratio: 1.333;
+		}	
 	}
-	a:visited {
-		color: var(--color-primary-3);
+	@media (min-width: 1500px) {
+	
+		html {
+			line-height: 1.6;
+			--ratio: 1.4;
+		}
 	}
-	a:hover {
-		color: var(--color-primary-2);
+	@media (min-width: 1700px) {
+	
+		html {
+			--margin-ratio: 2;
+			--ratio: 1.45;
+		}	
 	}
-	a:active {
-		color: var(--color-tertiary-3);
-	}
-	a:focus {
-		color: var(--color-primary-2);
-	}
+
+	/* ==========================================================================
+	Links
+	========================================================================== */
+		a {
+			color: var(--color-primary-3);
+			text-decoration: none;
+		}
+		a:visited {
+			color: var(--color-primary-3);
+		}
+		a:hover {
+			color: var(--color-primary-2);
+		}
+		a:active {
+			color: var(--color-secondary-1);
+		}
+		a:focus {
+			color: var(--color-primary-2);
+		}
 	/* ==========================================================================
 	Headings
 	========================================================================== */
 		h1,h2,h3,h4,h5,h6 {
 			font-family: var(--font-secondary);
-			margin: 0 0 var(--margin-large);
+			margin: var(--margin-xlarge) 0 var(--margin-small);
 		}
 		h1 {
 			color: var(--color-primary-3);
@@ -168,38 +204,123 @@ Header Component
 /* ==========================================================================
 Nav
 ========================================================================== */
-	nav ul {
-		padding: 0;
-	}
-	nav li {
-		display: inline;
-		margin: .5rem 1rem .5rem 0;
-		padding: .3rem .3rem .3rem 0;
-	}
-	nav a {
-		color: var(--color-secondary-1);
-	}
-	nav a:visited {
-		color: var(--color-secondary-1);
-	}
-	nav a:hover {
-		color: var(--color-primary-3);
-	}
-	nav a:active {
-		color: var(--color-tertiary-3);
-	}
+	/*
+	Primary Nav
+	*/
+		.primary-nav ul {
+			padding-left: -2rem;
+		}
+		.primary-nav li {
+			display: inline;
+			margin: .5rem 1rem .5rem 0;
+			padding: .3rem .3rem .3rem 0;
+		}
+		.primary-nav a {
+			color: var(--color-secondary-1);
+		}
+		.primary-nav a:visited {
+			color: var(--color-secondary-1);
+		}
+		.primary-nav a:hover {
+			color: var(--color-primary-3);
+		}
+		.primary-nav a:active {
+			color: var(--color-tertiary-3);
+		}
+		.current-page {
+			border-bottom: .2rem solid var(--color-primary-3);
+			padding: .2rem;
+		}
+	/*
+	Secondary Nav
+	*/
+		.secondary-nav ul {
+			list-style: none;
+			padding: 0;
+		}
+		.secondary-nav li {
+			padding: 0 0 1rem;
+		}
+		.secondary-nav a {
+			color: var(--color-secondary-3);
+			padding-left: 0;
+		}
+		.secondary-nav a:visited {
+			color: var(--color-secondary-3);
+		}
+		.secondary-nav a:hover {
+			color: var(--color-primary-3);
+		}
+		.secondary-nav a:active {
+			color: var(--color-secondary-1);
+		}
+	/*
+	Side Bar
+	*/
+		.side-nav {
+			max-width: 18rem;
+		}
+		.side-nav ul {
+			background-color: var(--color-primary-1);
+			list-style: none;
+			padding: 1rem 1.2rem .4rem;
+		}
+		.side-nav li {
+			padding: 0 .5rem .5rem;
+		}
+		.side-nav a {
+			color: var(--color-secondary-3);
+		}
+		.side-nav a:visited {
+			color: var(--color-secondary-3);
+		}
+		.side-nav a:hover {
+			color: var(--color-primary-3);
+		}
+		.side-nav a:active {
+			color: var(--color-secondary-1);
+		}
 /* ==========================================================================
 Body Component
 ========================================================================== */
+	
 	body {
 		margin: 0;
 	}
 	main {
 		max-width: 32rem;
-		margin: 3rem auto 20rem;
+		margin: 3rem 1rem 5rem;
 	}
 	svg {
-		max-width: 8rem;
+		max-width: 18rem;
+	}
+	text {
+		font-size: 100%
+		padding: 0 .1rem;
+	}
+
+	@media (min-width: 620px) {	
+		main {
+			margin: 3rem auto 8rem;
+		}
+	}
+	@media (min-width: 1220px) {
+		main {
+			max-width: 37rem;
+			margin: 3rem auto 10rem;
+		}
+		svg {
+			max-width: 10rem;
+		}
+	}
+	@media (min-width: 1700px) {
+		main {
+			max-width: 43rem;
+			margin: 3rem auto 10rem;
+		}
+		svg {
+			max-width: 12rem;
+		}
 	}
 /* ==========================================================================
 Footer Component
@@ -207,17 +328,78 @@ Footer Component
 	footer {
 		background-color: var(--color-primary-1);
 		color: var(--color-secondary-3);
+		display: inline-block;
 		padding: 1.8rem;
+		min-width: 100%;
 	}
-	footer nav {
-		text-align: center;
+	.footer-text {
+		max-width: 85%;
+	}
+	.footer-links {
+		display: inline-block;
+	}
+	.footer-links ul {
+		padding-left: 0;
+	}
+	.copy-text {
+		display: block;
+	}
+
+	@media (min-width: 760px) {
+		.footer-text {
+			display: inline-block;
+			margin: 0 6rem 2rem 2rem;
+			max-width: 57%;
+		}
+		.secondary-nav {
+			display: inline-block;
+			margin: 0 3rem 2rem 3rem;
+			max-width: 10rem;
+		}
+		.secondary-nav ul {
+			margin-top: 0;
+		}
+		.footer-links {
+			display: inline-block;
+			margin: 1rem 3rem;
+		}
+		.copy-text {
+			display: inline-block;
+		}
+	}
+	@media (min-width: 1220px) {
+		.footer-text {
+			margin: 0 6rem 2rem 12rem;
+			max-width: 60%
+		}
+	}
+	@media (min-width: 1500px) {
+		.footer-text {
+			margin: 0 6rem 2rem 19rem;
+		}
+	}
+	@media (min-width: 1700px) {
+		.footer-text {
+			margin: 0 6rem 2rem 26rem;
+			max-width: 40rem;
+		}
+		.footer-links {
+			display: block;
+			margin-left: 20%;
+		}
+		.copy-text {
+			margin: 0 3rem 2rem 20%;
+		}
+		.secondary-nav {
+			margin: 0 3rem 2rem 20%;
+		}
 	}
 /* ==========================================================================
 Examples
 ========================================================================== */
 	figure {
 		border-left: 1px solid var(--color-tertiary-3);
-		padding-left: .5rem;
+		padding-left: 1rem;
 	}
 	.primary-font {
 		font-family: var(--font-primary);
@@ -565,7 +747,13 @@ Components
 	Form messgaes 
 	========================================================================== */
 		.error {
-		    background-color: var(--color-error);
+		    background-color: var(--color-error-1);
+		    border: 2px solid var(--color-error-2);
+		}
+		.error-message {
+			color: var(--color-error-2);
+			font-size: var(--size-xsmall);
+			margin: -1.4rem 0 1.5rem;
 		}
 /* ==========================================================================
 Media Queries
