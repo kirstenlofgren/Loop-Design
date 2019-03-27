@@ -10,7 +10,7 @@
 <body>
 	<header>
 		<div class="logo">Loop</div>
-
+		
 		<nav class="primary-nav">
 			<ul>
 				<li><a href="index.html">Home</a></li>
@@ -20,6 +20,40 @@
 			</ul>
 		</nav>
 	</header>
+
+<!--<button id="open-modal" type="button">Components</button>
+<dialog>-->
+	<div class="sidebar">	
+		<nav class="side-nav">
+			<h2 class="nav-heading">Components</h2>
+			<ul>
+				<li><a href="#button-links">Button Links</a>
+					<ul>
+						<li><a href="#hero-button">Hero Button</a></li>
+						<li><a href="#normal-button">Normal Button</a></li>
+						<li><a href="#tertiary-button">Tertiary Button</a></li>
+					</ul>
+				</li>
+				<li><a href="#accordions">Accordions</a></li>
+				<li><a href="#modal-dialog">Modal Dialog</a></li>
+				<li><a href="#form-inputs">Form Inputs</a>
+					<ul>
+						<li><a href="#working-form">Working Form</a></li>
+						<li><a href="#error-form">Error Form</a></li>
+						<li><a href="#disabled-form">Disabled Form</a></li>
+					</ul>
+				</li>
+				<li><a href="#navigation">Navigation</a>
+					<ul>
+						<li><a href="#primary-navigation">Primary Navigation</a></li>
+						<li><a href="#secondary-navigation">Secondary Navigation</a></li>
+						<li><a href="#tertiary-navigation">Tertiary Navigation</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+<!--</dialog>-->
 
 	<main>
 		<h1>Loop Design System Components</h1>
@@ -163,19 +197,7 @@
 
 					<!--<label class="box box-check">1<input type="checkbox" name="check1" value="1"><span class="custom-box"></span></label>-->
 
-					<label class="indicator">
-						<input type="checkbox" name="check1" value="1">
-					
-					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						 viewBox="0 0 11 11" style="enable-background:new 0 0 11 11;" xml:space="preserve">
-
-					<style type="text/css">
-						.st0{fill:none;stroke:#2D2F3D;stroke-width:1.5;stroke-miterlimit:10;}
-					</style>
-					<polyline class="st0 checkmark" points="9.1,3.1 4.3,7.9 1.9,5.5 "/>
-					</svg>
-					1
-					</label>
+					<label class="indicator"><input type="checkbox" name="check2" value="2">1</label>
 					<label class="indicator"><input type="checkbox" name="check2" value="2">2</label>
 					<label class="indicator"><input type="checkbox" name="check3" value="3">3</label>
 				</div>
@@ -302,7 +324,7 @@
 			</nav>
 		</figure>
 
-		<h3 class="example-indicator-secondary">Tertiary Navingation</h3>
+		<h3 class="example-indicator-secondary" id="tertiary-navigation">Tertiary Navigation</h3>
 		
 		<figure>
 			<nav class="side-nav">
@@ -327,6 +349,7 @@
 						<ul>
 							<li><a href="#primary-navigation">Primary Navigation</a></li>
 							<li><a href="#secondary-navigation">Secondary Navigation</a></li>
+							<li><a href="#tertiary-navigation">Tertiary Navigation</a></li>
 						</ul>
 					</li>
 				</ul>

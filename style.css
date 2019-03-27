@@ -133,6 +133,12 @@ Typography
 			padding-top: .5rem;
 			width: 20rem;
 		}
+		.nav-heading {
+			background-color: var(--color-primary-1);
+			font-size: var(--size-xlarge);
+			margin: 0; 
+			padding: 1.5rem 0 0 1.2rem; 
+		}
 	/* ==========================================================================
 	Heading Links
 	========================================================================== */
@@ -211,7 +217,7 @@ Nav
 			padding-left: -2rem;
 		}
 		.primary-nav li {
-			display: inline;
+			display: block;
 			margin: .5rem 1rem .5rem 0;
 			padding: .3rem .3rem .3rem 0;
 		}
@@ -230,6 +236,11 @@ Nav
 		.current-page {
 			border-bottom: .2rem solid var(--color-primary-3);
 			padding: .2rem;
+		}
+		@media (min-width: 620px) {
+			.primary-nav li {
+				display: inline;
+			}
 		}
 	/*
 	Secondary Nav
@@ -255,15 +266,23 @@ Nav
 			color: var(--color-secondary-1);
 		}
 	/*
-	Side Bar
+	Sidebar
 	*/
+		.sidebar {
+			float: left;
+			margin: var(--margin-xlarge) 0 29rem;
+			position: fixed;
+			left: 18rem;
+			visibility: hidden;
+		}
 		.side-nav {
 			max-width: 18rem;
 		}
 		.side-nav ul {
 			background-color: var(--color-primary-1);
 			list-style: none;
-			padding: 1rem 1.2rem .4rem;
+			padding: .5rem 1.2rem;
+			margin: 0;
 		}
 		.side-nav li {
 			padding: 0 .5rem .5rem;
@@ -280,10 +299,34 @@ Nav
 		.side-nav a:active {
 			color: var(--color-secondary-1);
 		}
+		@media (min-width: 1220px) {
+			.sidebar {
+				position: sticky;
+				top: 6rem;
+				left: 0;
+				visibility: visible;
+			}
+		}
+		@media (min-width: 1500px) {
+			.sidebar {
+				margin-bottom: 27.5rem;
+			}
+		}
+		@media (min-width: 1700px) {
+			.sidebar {
+				margin-bottom: 34.5rem;
+			}
+		}
+		/*.side-drawer {
+			position: fixed;
+			left: -18rem;
+			transform: translateX(18rem);
+			transition: transform 0.5s;
+		}*/
+
 /* ==========================================================================
 Body Component
 ========================================================================== */
-	
 	body {
 		margin: 0;
 	}
@@ -301,13 +344,13 @@ Body Component
 
 	@media (min-width: 620px) {	
 		main {
-			margin: 3rem auto 8rem;
+			margin: 3rem auto 6rem;
 		}
 	}
 	@media (min-width: 1220px) {
 		main {
 			max-width: 37rem;
-			margin: 3rem auto 10rem;
+			margin: 3rem auto 7rem;
 		}
 		svg {
 			max-width: 10rem;
@@ -329,7 +372,7 @@ Footer Component
 		background-color: var(--color-primary-1);
 		color: var(--color-secondary-3);
 		display: inline-block;
-		padding: 1.8rem;
+		padding: 1.8rem 1.8rem 1rem;
 		min-width: 100%;
 	}
 	.footer-text {
@@ -361,7 +404,7 @@ Footer Component
 		}
 		.footer-links {
 			display: inline-block;
-			margin: 1rem 3rem;
+			margin: 1rem 3rem 0;
 		}
 		.copy-text {
 			display: inline-block;
@@ -616,6 +659,21 @@ Components
 		*/
 			input[type="checkbox"] {
 				background-color: var(--color-primary-1);
+				display: inline;
+				height: 1rem;
+				margin: .5rem .75rem .5rem .5rem;
+				width: 1rem;
+			}
+			.indicator {
+				background-color: var(--color-primary-1);
+				height: 2rem;
+				margin: .25rem 0 .75rem 0;
+				padding: .5rem;
+				width: 15rem;
+			}
+			/*
+			input[type="checkbox"] {
+				background-color: var(--color-primary-1);
 				clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
 				display: inline;
 				height: 1rem;
@@ -630,12 +688,13 @@ Components
 				width: 15rem;
 			}
 			.checkmark {
-				/*display: none;
-				*/			
+				display: none;
+						
 			}
 			input[type="checkbox"][checked] + svg .checkmark {
 				display: block;
 			}
+			*/
 		/* Checkbox Attempts
 			.box {
 				height: 1rem;
