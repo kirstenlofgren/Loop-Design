@@ -25,6 +25,9 @@ Variable Styles
 		--color-error-1: #FDCFCF;
 		--color-error-2: #F94F4F;
 
+		--color-success-1: #CFFCE6;
+		--color-success-2: #4DF2A2;
+
 		--ratio:		1.250;
 		--size-xsmall: 	calc( var(--size-small) / (.9 * var(--ratio) ) );
 		--size-small: 	calc( var(--size-large) / (.9 * var(--ratio) ) );
@@ -207,6 +210,10 @@ Header Component
 		color: var(--color-primary-3);
 		font-size: var(--size-3xlarge);
 	}
+/* ==========================================================================
+Hero Component
+========================================================================== */
+
 /* ==========================================================================
 Nav
 ========================================================================== */
@@ -814,17 +821,100 @@ Components
 			font-size: var(--size-xsmall);
 			margin: -1.4rem 0 1.5rem;
 		}
-/* ==========================================================================
-Media Queries
-========================================================================== */
-/*media query main {
-	max-width: 70%;
-	margin:10rem auto 20rem auto;
-}
-}*/
+	/* ==========================================================================
+	Notifications
+	========================================================================== */
+		.notifiaction {
+			align-item: center;
+			flex-direction: column;
+			justify-content: center;
+			display: flex;
+
+			font-size: var(--size-xsmall);
+			line-height: 1.6;
+			margin: .5rem;
+			padding: 1rem;
+		}
+		/*
+		Error Notification
+		*/
+			.error-notification {
+				background-color: var(--color-error-1);
+			}
+			.error-notification a, .error-notification a:visited  {
+				background-color: var(--color-error-2);
+				border:  .2rem solid var(--color-error-2);
+				color: var(--color-secondary-3);
+				display: inline-block;
+				font: var(--font-secondary);
+				padding: .8rem 1.3rem;
+				text-transform: uppercase;
+			}
+			.error-notification a:hover {
+				background-color: var(--color-secondary-3);
+				border: none;
+				color: var(--color-tertiary-1);	
+				padding: 1rem 1.5rem;
+			}
+			.error-notification a:active {
+				background: linear-gradient(to left, var(--color-secondary-1), var(--color-secondary-2) 60%);
+				transition: all .4s ease-out;
+			}
+			.error-notification a:focus {
+				background-color: var(--color-secondary-1);
+				transition: all .4s ease-out;
+				border: none;
+				color: var(--color-tertiary-1);	
+				padding: 1rem 1.5rem;
+			}
+		/*
+		Warning Notification
+		*/
+			.warning-notification {
+				background-color: var(--color-primary-1);
+			}
+			.warning-notification a, .warning-notification a:visited  {
+				background-color: var(--color-primary-3);
+				border:  .2rem solid var(--color-primary-3);
+				color: var(--color-secondary-3);
+				display: inline-block;
+				font: var(--font-secondary);
+				padding: .8rem 1.3rem;
+				text-transform: uppercase;
+			}
+			.warning-notification a:hover {
+				background-color: var(--color-secondary-3);
+				border: none;
+				color: var(--color-tertiary-1);	
+				padding: 1rem 1.5rem;
+			}
+			.warning-notification a:active {
+				background: linear-gradient(to left, var(--color-secondary-1), var(--color-secondary-2) 60%);
+				transition: all .4s ease-out;
+			}
+			.warning-notification a:focus {
+				background-color: var(--color-secondary-1);
+				transition: all .4s ease-out;
+				border: none;
+				color: var(--color-tertiary-1);	
+				padding: 1rem 1.5rem;
+			}
+		/*
+		Neutral Notification
+		*/
+			.neutral-notification {
+				background-color: var(--color-secondary-1);
+			}
+		/*
+		Success Notification
+		*/
+			.success-notification {
+				background-color: var(--color-success-1);
+			}
+
 /*aside nav (style and components: h2s),
  copyright on same row, media queries, animated buttons, 
  button push in hide replace check boxes in label, 
- range with webkit maybe styeable css tricks article*/
+ range with webkit maybe styeable css tricks article, get check boxes to work*/
 
 
