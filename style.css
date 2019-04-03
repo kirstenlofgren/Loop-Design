@@ -213,7 +213,38 @@ Header Component
 /* ==========================================================================
 Hero Component
 ========================================================================== */
-
+	.hero {
+	    background-image: url(baking.jpg);
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    min-height: 20vh;
+	}
+	.overlay {
+		background-color: rgba(252, 252, 252, .65);
+		background-size: cover;
+		min-height: 20vh;
+		padding: .5rem 2rem 3.5rem;
+	}
+	.hero h1 {
+	    font-size: 10vw;
+	}
+	.hero p {
+	    font-size: 5vw;
+	    margin-bottom: 1.5rem;
+	}
+	@media (min-width:620px) {
+		.hero h1 {
+	    	font-size: 8vw;
+		}
+		.hero p {
+		    font-size: 3vw;
+		    margin-bottom: 2rem;
+		}
+		.hero, .overlay {
+			min-height: 30vh;
+		}
+	}
 /* ==========================================================================
 Nav
 ========================================================================== */
@@ -330,7 +361,6 @@ Nav
 			transform: translateX(18rem);
 			transition: transform 0.5s;
 		}*/
-
 /* ==========================================================================
 Body Component
 ========================================================================== */
@@ -475,8 +505,8 @@ Components
 				background-color: var(--color-primary-3);
 				color: var(--color-tertiary-1);
 				display: inline-block;
-				font: var(--size-small) var(--font-secondary);
-				padding: 1rem 1.5rem;
+				font: 4vw var(--font-secondary);
+				padding: .7rem 1rem;
 				text-transform: uppercase;
 			}
 			a.hero-button:hover {
@@ -491,6 +521,12 @@ Components
 				background-color: var(--color-primary-1);
 				color: var(--color-secondary-3);
 				transition: background-color .4s ease-in;
+			}
+			@media (min-width:620px) {
+				a.hero-button {
+					font: 1vw;
+					padding: 1rem 1.5rem;
+				}
 			}
 		/*
 		Normal Buttons
@@ -824,16 +860,26 @@ Components
 	/* ==========================================================================
 	Notifications
 	========================================================================== */
-		.notifiaction {
-			align-item: center;
-			flex-direction: column;
-			justify-content: center;
+		.notification {
 			display: flex;
-
+			flex-direction: column;
 			font-size: var(--size-xsmall);
+			justify-content: space-between;
 			line-height: 1.6;
 			margin: .5rem;
 			padding: 1rem;
+		}
+		.notification-icon {
+			height: 50px;
+			padding: .3rem;
+			width: 50px;
+		}
+		.icon-message {
+			display: flex;
+			flex-direction: row;
+		}
+		.notification-button {
+			margin-left: auto;
 		}
 		/*
 		Error Notification
@@ -903,7 +949,8 @@ Components
 		Neutral Notification
 		*/
 			.neutral-notification {
-				background-color: var(--color-secondary-1);
+				background-color: var(--color-secondary-2);
+				color: var(--color-tertiary-1);
 			}
 		/*
 		Success Notification
@@ -911,7 +958,12 @@ Components
 			.success-notification {
 				background-color: var(--color-success-1);
 			}
-
+	/* ==========================================================================
+	Hero Examples
+	========================================================================== */
+		.example-img {
+			max-width: 28rem
+		}
 /*aside nav (style and components: h2s),
  copyright on same row, media queries, animated buttons, 
  button push in hide replace check boxes in label, 
