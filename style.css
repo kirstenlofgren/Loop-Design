@@ -553,8 +553,8 @@ Components
 		/*
 		Tertiary Buttons
 		*/
-			a.tertiary-button, a.tertiary-button:visited  {
 				border:  .2rem solid var(--color-secondary-3);
+			a.tertiary-button, a.tertiary-button:visited  {
 				color: var(--color-secondary-3);
 				display: inline-block;
 				font: var(--size-small) var(--font-secondary);
@@ -589,21 +589,21 @@ Components
 		}
 		summary {
 			background-color: var(--color-primary-1);
-			list-style-image: url(arrow.svg);
+			list-style-image: url(images/arrow.svg);
 			padding: 1rem;
 		}
 		summary::-webkit-details-marker {
-		    background: url(arrow.svg);
+		    background: url(images/arrow.svg);
 		    color: transparent;
 		}
 		details[open] summary::-webkit-details-marker {
-			background: url(arrowdown.svg);
+			background: url(images/arrowdown.svg);
 		}
 		details[open] details summary::-webkit-details-marker {
-			background: url(arrow.svg);
+			background: url(images/arrow.svg);
 		}
 		details[open] details[open] summary::-webkit-details-marker {
-			background: url(arrowdown.svg);
+			background: url(images/arrowdown.svg);
 		}
 		summary:focus, details[open] summary {
 			background-color: var(--color-primary-2);
@@ -684,7 +684,7 @@ Components
 		Select 
 		*/
 			.custom-select {
-				background: url(arrow.svg) no-repeat 96%;
+				background: url(images/arrow.svg) no-repeat 96%;
 				background-color: var(--color-primary-1);
 				height: 2.8rem;
 				margin-bottom: 1.5rem;
@@ -963,6 +963,30 @@ Components
 	========================================================================== */
 		.example-img {
 			max-width: 28rem
+		}
+	/* ==========================================================================
+	Card Examples
+	========================================================================== */
+		.card {
+			background-color: var(--color-primary-1);
+			box-shadow: 5px 6px var(--color-tertiary-3);
+			max-width: 28rem;
+			padding: 1rem;
+		}
+		.card-heading {
+			margin: 1rem 0 .5rem;
+		}
+		.card img {
+			max-width: 100%;
+		}
+		.article-card a {
+			color: var(--color-secondary-3);
+		}
+		.profile-card {
+
+		}
+		.cta-card {
+
 		}
 /*aside nav (style and components: h2s),
  copyright on same row, media queries, animated buttons, 
