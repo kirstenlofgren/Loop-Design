@@ -5,7 +5,7 @@ Variable Styles
 	620 -unwrap or scale up figures
 	1220 -show side bar  and shift over
 	1500 -grow side bar 
-	1700 -shift left to decrease aide margin
+	1700 -shift left to decrease side margin
 	*/
 
 	/*light-1 medium-2 dark-3*/
@@ -24,9 +24,6 @@ Variable Styles
 
 		--color-error-1: #FDCFCF;
 		--color-error-2: #F94F4F;
-
-		--color-success-1: #CFFCE6;
-		--color-success-2: #4DF2A2;
 
 		--ratio:		1.250;
 		--size-xsmall: 	calc( var(--size-small) / (.9 * var(--ratio) ) );
@@ -136,12 +133,6 @@ Typography
 			padding-top: .5rem;
 			width: 20rem;
 		}
-		.nav-heading {
-			background-color: var(--color-primary-1);
-			font-size: var(--size-xlarge);
-			margin: 0; 
-			padding: 1.5rem 0 0 1.2rem; 
-		}
 	/* ==========================================================================
 	Heading Links
 	========================================================================== */
@@ -211,41 +202,6 @@ Header Component
 		font-size: var(--size-3xlarge);
 	}
 /* ==========================================================================
-Hero Component
-========================================================================== */
-	.hero {
-	    background-image: url(baking.jpg);
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    background-size: cover;
-	    min-height: 20vh;
-	}
-	.overlay {
-		background-color: rgba(252, 252, 252, .65);
-		background-size: cover;
-		min-height: 20vh;
-		padding: .5rem 2rem 3.5rem;
-	}
-	.hero h1 {
-	    font-size: 10vw;
-	}
-	.hero p {
-	    font-size: 5vw;
-	    margin-bottom: 1.5rem;
-	}
-	@media (min-width:620px) {
-		.hero h1 {
-	    	font-size: 8vw;
-		}
-		.hero p {
-		    font-size: 3vw;
-		    margin-bottom: 2rem;
-		}
-		.hero, .overlay {
-			min-height: 30vh;
-		}
-	}
-/* ==========================================================================
 Nav
 ========================================================================== */
 	/*
@@ -276,6 +232,7 @@ Nav
 			padding: .2rem;
 		}
 		@media (min-width: 620px) {
+			
 			.primary-nav li {
 				display: inline;
 			}
@@ -304,23 +261,15 @@ Nav
 			color: var(--color-secondary-1);
 		}
 	/*
-	Sidebar
+	Side Bar
 	*/
-		.sidebar {
-			float: left;
-			margin: var(--margin-xlarge) 0 29rem;
-			position: fixed;
-			left: 18rem;
-			visibility: hidden;
-		}
 		.side-nav {
 			max-width: 18rem;
 		}
 		.side-nav ul {
 			background-color: var(--color-primary-1);
 			list-style: none;
-			padding: .5rem 1.2rem;
-			margin: 0;
+			padding: 1rem 1.2rem .4rem;
 		}
 		.side-nav li {
 			padding: 0 .5rem .5rem;
@@ -337,33 +286,10 @@ Nav
 		.side-nav a:active {
 			color: var(--color-secondary-1);
 		}
-		@media (min-width: 1220px) {
-			.sidebar {
-				position: sticky;
-				top: 6rem;
-				left: 0;
-				visibility: visible;
-			}
-		}
-		@media (min-width: 1500px) {
-			.sidebar {
-				margin-bottom: 27.5rem;
-			}
-		}
-		@media (min-width: 1700px) {
-			.sidebar {
-				margin-bottom: 34.5rem;
-			}
-		}
-		/*.side-drawer {
-			position: fixed;
-			left: -18rem;
-			transform: translateX(18rem);
-			transition: transform 0.5s;
-		}*/
 /* ==========================================================================
 Body Component
 ========================================================================== */
+	
 	body {
 		margin: 0;
 	}
@@ -381,13 +307,13 @@ Body Component
 
 	@media (min-width: 620px) {	
 		main {
-			margin: 3rem auto 6rem;
+			margin: 3rem auto 8rem;
 		}
 	}
 	@media (min-width: 1220px) {
 		main {
 			max-width: 37rem;
-			margin: 3rem auto 7rem;
+			margin: 3rem auto 10rem;
 		}
 		svg {
 			max-width: 10rem;
@@ -409,7 +335,7 @@ Footer Component
 		background-color: var(--color-primary-1);
 		color: var(--color-secondary-3);
 		display: inline-block;
-		padding: 1.8rem 1.8rem 1rem;
+		padding: 1.8rem;
 		min-width: 100%;
 	}
 	.footer-text {
@@ -441,7 +367,7 @@ Footer Component
 		}
 		.footer-links {
 			display: inline-block;
-			margin: 1rem 3rem 0;
+			margin: 1rem 3rem;
 		}
 		.copy-text {
 			display: inline-block;
@@ -505,8 +431,8 @@ Components
 				background-color: var(--color-primary-3);
 				color: var(--color-tertiary-1);
 				display: inline-block;
-				font: 4vw var(--font-secondary);
-				padding: .7rem 1rem;
+				font: var(--size-small) var(--font-secondary);
+				padding: 1rem 1.5rem;
 				text-transform: uppercase;
 			}
 			a.hero-button:hover {
@@ -521,12 +447,6 @@ Components
 				background-color: var(--color-primary-1);
 				color: var(--color-secondary-3);
 				transition: background-color .4s ease-in;
-			}
-			@media (min-width:620px) {
-				a.hero-button {
-					font: 1vw;
-					padding: 1rem 1.5rem;
-				}
 			}
 		/*
 		Normal Buttons
@@ -553,8 +473,8 @@ Components
 		/*
 		Tertiary Buttons
 		*/
-				border:  .2rem solid var(--color-secondary-3);
 			a.tertiary-button, a.tertiary-button:visited  {
+				border:  .2rem solid var(--color-secondary-3);
 				color: var(--color-secondary-3);
 				display: inline-block;
 				font: var(--size-small) var(--font-secondary);
@@ -589,21 +509,21 @@ Components
 		}
 		summary {
 			background-color: var(--color-primary-1);
-			list-style-image: url(images/arrow.svg);
+			list-style-image: url(arrow.svg);
 			padding: 1rem;
 		}
 		summary::-webkit-details-marker {
-		    background: url(images/arrow.svg);
+		    background: url(arrow.svg);
 		    color: transparent;
 		}
 		details[open] summary::-webkit-details-marker {
-			background: url(images/arrowdown.svg);
+			background: url(arrowdown.svg);
 		}
 		details[open] details summary::-webkit-details-marker {
-			background: url(images/arrow.svg);
+			background: url(arrow.svg);
 		}
 		details[open] details[open] summary::-webkit-details-marker {
-			background: url(images/arrowdown.svg);
+			background: url(arrowdown.svg);
 		}
 		summary:focus, details[open] summary {
 			background-color: var(--color-primary-2);
@@ -684,7 +604,7 @@ Components
 		Select 
 		*/
 			.custom-select {
-				background: url(images/arrow.svg) no-repeat 96%;
+				background: url(arrow.svg) no-repeat 96%;
 				background-color: var(--color-primary-1);
 				height: 2.8rem;
 				margin-bottom: 1.5rem;
@@ -702,21 +622,6 @@ Components
 		*/
 			input[type="checkbox"] {
 				background-color: var(--color-primary-1);
-				display: inline;
-				height: 1rem;
-				margin: .5rem .75rem .5rem .5rem;
-				width: 1rem;
-			}
-			.indicator {
-				background-color: var(--color-primary-1);
-				height: 2rem;
-				margin: .25rem 0 .75rem 0;
-				padding: .5rem;
-				width: 15rem;
-			}
-			/*
-			input[type="checkbox"] {
-				background-color: var(--color-primary-1);
 				clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
 				display: inline;
 				height: 1rem;
@@ -731,13 +636,12 @@ Components
 				width: 15rem;
 			}
 			.checkmark {
-				display: none;
-						
+				/*display: none;
+				*/			
 			}
 			input[type="checkbox"][checked] + svg .checkmark {
 				display: block;
 			}
-			*/
 		/* Checkbox Attempts
 			.box {
 				height: 1rem;
@@ -857,140 +761,17 @@ Components
 			font-size: var(--size-xsmall);
 			margin: -1.4rem 0 1.5rem;
 		}
-	/* ==========================================================================
-	Notifications
-	========================================================================== */
-		.notification {
-			display: flex;
-			flex-direction: column;
-			font-size: var(--size-xsmall);
-			justify-content: space-between;
-			line-height: 1.6;
-			margin: .5rem;
-			padding: 1rem;
-		}
-		.notification-icon {
-			height: 50px;
-			padding: .3rem;
-			width: 50px;
-		}
-		.icon-message {
-			display: flex;
-			flex-direction: row;
-		}
-		.notification-button {
-			margin-left: auto;
-		}
-		/*
-		Error Notification
-		*/
-			.error-notification {
-				background-color: var(--color-error-1);
-			}
-			.error-notification a, .error-notification a:visited  {
-				background-color: var(--color-error-2);
-				border:  .2rem solid var(--color-error-2);
-				color: var(--color-secondary-3);
-				display: inline-block;
-				font: var(--font-secondary);
-				padding: .8rem 1.3rem;
-				text-transform: uppercase;
-			}
-			.error-notification a:hover {
-				background-color: var(--color-secondary-3);
-				border: none;
-				color: var(--color-tertiary-1);	
-				padding: 1rem 1.5rem;
-			}
-			.error-notification a:active {
-				background: linear-gradient(to left, var(--color-secondary-1), var(--color-secondary-2) 60%);
-				transition: all .4s ease-out;
-			}
-			.error-notification a:focus {
-				background-color: var(--color-secondary-1);
-				transition: all .4s ease-out;
-				border: none;
-				color: var(--color-tertiary-1);	
-				padding: 1rem 1.5rem;
-			}
-		/*
-		Warning Notification
-		*/
-			.warning-notification {
-				background-color: var(--color-primary-1);
-			}
-			.warning-notification a, .warning-notification a:visited  {
-				background-color: var(--color-primary-3);
-				border:  .2rem solid var(--color-primary-3);
-				color: var(--color-secondary-3);
-				display: inline-block;
-				font: var(--font-secondary);
-				padding: .8rem 1.3rem;
-				text-transform: uppercase;
-			}
-			.warning-notification a:hover {
-				background-color: var(--color-secondary-3);
-				border: none;
-				color: var(--color-tertiary-1);	
-				padding: 1rem 1.5rem;
-			}
-			.warning-notification a:active {
-				background: linear-gradient(to left, var(--color-secondary-1), var(--color-secondary-2) 60%);
-				transition: all .4s ease-out;
-			}
-			.warning-notification a:focus {
-				background-color: var(--color-secondary-1);
-				transition: all .4s ease-out;
-				border: none;
-				color: var(--color-tertiary-1);	
-				padding: 1rem 1.5rem;
-			}
-		/*
-		Neutral Notification
-		*/
-			.neutral-notification {
-				background-color: var(--color-secondary-2);
-				color: var(--color-tertiary-1);
-			}
-		/*
-		Success Notification
-		*/
-			.success-notification {
-				background-color: var(--color-success-1);
-			}
-	/* ==========================================================================
-	Hero Examples
-	========================================================================== */
-		.example-img {
-			max-width: 28rem
-		}
-	/* ==========================================================================
-	Card Examples
-	========================================================================== */
-		.card {
-			background-color: var(--color-primary-1);
-			box-shadow: 5px 6px var(--color-tertiary-3);
-			max-width: 28rem;
-			padding: 1rem;
-		}
-		.card-heading {
-			margin: 1rem 0 .5rem;
-		}
-		.card img {
-			max-width: 100%;
-		}
-		.article-card a {
-			color: var(--color-secondary-3);
-		}
-		.profile-card {
-
-		}
-		.cta-card {
-
-		}
+/* ==========================================================================
+Media Queries
+========================================================================== */
+/*media query main {
+	max-width: 70%;
+	margin:10rem auto 20rem auto;
+}
+}*/
 /*aside nav (style and components: h2s),
  copyright on same row, media queries, animated buttons, 
  button push in hide replace check boxes in label, 
- range with webkit maybe styeable css tricks article, get check boxes to work*/
+ range with webkit maybe styeable css tricks article*/
 
 

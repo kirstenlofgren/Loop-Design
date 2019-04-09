@@ -10,7 +10,7 @@
 <body>
 	<header>
 		<div class="logo">Loop</div>
-		
+
 		<nav class="primary-nav">
 			<ul>
 				<li><a href="index.html">Home</a></li>
@@ -20,43 +20,6 @@
 			</ul>
 		</nav>
 	</header>
-
-<!--<button id="open-modal" type="button">Components</button>
-<dialog>-->
-	<div class="sidebar">	
-		<nav class="side-nav">
-			<h2 class="nav-heading">Components</h2>
-			<ul>
-				<li><a href="#button-links">Button Links</a>
-					<ul>
-						<li><a href="#hero-button">Hero Button</a></li>
-						<li><a href="#normal-button">Normal Button</a></li>
-						<li><a href="#tertiary-button">Tertiary Button</a></li>
-					</ul>
-				</li>
-				<li><a href="#accordions">Accordions</a></li>
-				<li><a href="#modal-dialog">Modal Dialog</a></li>
-				<li><a href="#form-inputs">Form Inputs</a>
-					<ul>
-						<li><a href="#working-form">Working Form</a></li>
-						<li><a href="#error-form">Error Form</a></li>
-						<li><a href="#disabled-form">Disabled Form</a></li>
-					</ul>
-				</li>
-				<li><a href="#navigation">Navigation</a>
-					<ul>
-						<li><a href="#primary-navigation">Primary Navigation</a></li>
-						<li><a href="#secondary-navigation">Secondary Navigation</a></li>
-						<li><a href="#tertiary-navigation">Tertiary Navigation</a></li>
-					</ul>
-				</li>
-				<li><a href="#notifications">Notifications</a></li>
-				<li><a href="#hero-block">Hero Block</a></li>
-				<li><a href="#information-card">information Card</a></li>
-			</ul>
-		</nav>
-	</div>
-<!--</dialog>-->
 
 	<main>
 		<h1>Loop Design System Components</h1>
@@ -200,7 +163,19 @@
 
 					<!--<label class="box box-check">1<input type="checkbox" name="check1" value="1"><span class="custom-box"></span></label>-->
 
-					<label class="indicator"><input type="checkbox" name="check2" value="2">1</label>
+					<label class="indicator">
+						<input type="checkbox" name="check1" value="1">
+					
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 viewBox="0 0 11 11" style="enable-background:new 0 0 11 11;" xml:space="preserve">
+
+					<style type="text/css">
+						.st0{fill:none;stroke:#2D2F3D;stroke-width:1.5;stroke-miterlimit:10;}
+					</style>
+					<polyline class="st0 checkmark" points="9.1,3.1 4.3,7.9 1.9,5.5 "/>
+					</svg>
+					1
+					</label>
 					<label class="indicator"><input type="checkbox" name="check2" value="2">2</label>
 					<label class="indicator"><input type="checkbox" name="check3" value="3">3</label>
 				</div>
@@ -327,7 +302,7 @@
 			</nav>
 		</figure>
 
-		<h3 class="example-indicator-secondary" id="tertiary-navigation">Tertiary Navigation</h3>
+		<h3 class="example-indicator-secondary">Tertiary Navingation</h3>
 		
 		<figure>
 			<nav class="side-nav">
@@ -352,143 +327,11 @@
 						<ul>
 							<li><a href="#primary-navigation">Primary Navigation</a></li>
 							<li><a href="#secondary-navigation">Secondary Navigation</a></li>
-							<li><a href="#tertiary-navigation">Tertiary Navigation</a></li>
 						</ul>
 					</li>
 				</ul>
 			</nav>
 		</figure>
-
-		<h2 class="example-indicator" id="notifications">Notifications</h2>
-
-		<h3 class="example-indicator-secondary" id="error">Error</h3>
-		<figure>
-			<div class="notification error-notification">
-				<div class="icon-message">
-					<svg x="0px" y="0px" width="72.745px" height="71.049px" viewBox="0 0 72.745 71.049" class="notification-icon">
-						<path fill="#F34E4F" d="M22.494,60.988h-8.291l18.024-26.126L15.332,10.061h8.602l12.849,19.483l12.747-19.483h8.187l-16.888,24.8 l17.714,26.127h-8.533L36.44,40.049L22.494,60.988z"/>
-					</svg>
-					<p>This is a notification that something went wrong.</p>
-				</div>
-				<div class="notification-button">
-					<a href="#">Help Button</a>
-				</div>
-			</div>
-		</figure>
-
-		<h3 class="example-indicator-secondary" id="warning">Warning</h3>
-		<figure>
-			<div class="notification warning-notification">
-				<div class="icon-message">
-					<svg x="0px" y="0px" width="70.21px" height="71.234px" viewBox="0 0 70.21 71.234" class="notification-icon">
-						<path fill="#EC8E5E" d="M39.412,57.583c1.16,1.161,1.74,2.582,1.74,4.263c0,1.683-0.58,3.118-1.74,4.307 c-1.161,1.188-2.61,1.783-4.35,1.783c-1.683,0-3.104-0.595-4.263-1.783c-1.161-1.188-1.74-2.624-1.74-4.307 c0-1.682,0.579-3.102,1.74-4.263c1.16-1.16,2.581-1.74,4.263-1.74C36.802,55.843,38.251,56.423,39.412,57.583z M39.412,6.949 l-0.87,39.933h-7.047L30.538,6.949H39.412z"/>
-					</svg>
-					<p>This is a notification that provides warning information.</p>
-				</div>
-				<div class="notification-button">
-					<a href="#">Action Button</a>
-				</div>
-			</div>
-		</figure>
-
-		<h3 class="example-indicator-secondary" id="neutral">Neutral</h3>
-		<figure>
-			<div class="notification neutral-notification">
-				<div class="icon-message">
-					<svg x="0px" y="0px" width="81px" height="77.045px" viewBox="0 0 81 77.045" class=" notification-icon">
-						<g>
-							<g>
-								<g>
-									<path fill="#8A8CA3" stroke="#8A8CA3" stroke-width="3" stroke-miterlimit="10" d="M66.142,56.906l-4.437-7.392
-										c-2.045-3.411-3.127-7.316-3.127-11.296v-6.475c0-9.966-8.112-18.078-18.078-18.078c-9.966,0-18.078,8.112-18.078,18.078v6.475
-										c0,3.979-1.083,7.885-3.127,11.296l-4.437,7.392c-0.24,0.397-0.246,0.896-0.018,1.299c0.23,0.405,0.661,0.656,1.126,0.656h49.068
-										c0.465,0,0.896-0.25,1.126-0.656C66.387,57.801,66.382,57.303,66.142,56.906z M18.246,56.278l3.262-5.437
-										c2.288-3.812,3.497-8.176,3.497-12.623v-6.475c0-8.546,6.95-15.495,15.495-15.495s15.495,6.949,15.495,15.495v6.475
-										c0,4.447,1.208,8.812,3.495,12.623l3.264,5.437H18.246L18.246,56.278z"/>
-								</g>
-							</g>
-							<g>
-								<g>
-									<path fill="#8A8CA3" stroke="#8A8CA3" stroke-width="3" stroke-miterlimit="10" d="M40.5,4.627c-2.849,0-5.165,2.316-5.165,5.165
-										v5.165c0,0.713,0.579,1.292,1.291,1.292c0.713,0,1.292-0.579,1.292-1.292V9.792c0-1.425,1.157-2.583,2.583-2.583
-										c1.425,0,2.583,1.157,2.583,2.583v5.165c0,0.713,0.579,1.292,1.291,1.292c0.713,0,1.292-0.579,1.292-1.292V9.792
-										C45.665,6.943,43.349,4.627,40.5,4.627z"/>
-								</g>
-							</g>
-							<g>
-								<g>
-									<path fill="#8A8CA3" stroke="#8A8CA3" stroke-width="3" stroke-miterlimit="10" d="M46.088,56.916
-										c-0.364-0.614-1.152-0.816-1.769-0.462c-0.618,0.362-0.824,1.155-0.462,1.769c0.335,0.571,0.519,1.255,0.519,1.929
-										c0,2.136-1.738,3.874-3.874,3.874s-3.874-1.738-3.874-3.874c0-0.674,0.184-1.358,0.52-1.929c0.359-0.617,0.152-1.407-0.462-1.769
-										c-0.623-0.354-1.408-0.152-1.769,0.462c-0.571,0.976-0.873,2.095-0.873,3.236c0,3.562,2.895,6.457,6.457,6.457
-										s6.456-2.895,6.461-6.457C46.961,59.01,46.659,57.892,46.088,56.916z"/>
-								</g>
-							</g>
-						</g>
-					</svg>
-					<p>This is a notification that just provides information.</p>
-				</div>
-			</div>
-		</figure>
-
-		<h3 class="example-indicator-secondary" id="success">Success</h3>
-		<figure>
-			<div class="notification success-notification">
-				<div class="icon-message">
-					<svg x="0px" y="0px" width="67.21px" height="79.876px" viewBox="0 0 67.21 79.876" class="notification-icon">
-						<polyline fill="none" stroke="#4BB48A" stroke-width="9" stroke-linecap="square" stroke-miterlimit="10" points="57.427,14.886 26.351,60.876 24.788,62.159 9.783,40.694 "/> 
-					</svg>
-					<p>This is a notification to of success.</p>
-				</div>	
-			</div>
-		</figure>
-
-		<h2 class="example-indicator" id="hero-block">Hero Block</h2>
-
-		<h3 class="example-indicator-secondary" id="mobile-hero">Mobile Hero</h3>
-		<figure>
-			<img src="images/mobile_hero.jpg" alt="mobile hero block example" class="example-img">
-		</figure>
-		
-		<h3 class="example-indicator-secondary" id="desktop-hero">Desktop Hero</h3>
-		<figure>
-			<img src="images/desktop_hero.jpg" alt="desktop hero block example" class="example-img">
-		</figure>
-
-		<h2 class="example-indicator" id="information-card">Information Card</h2>
-
-		<h3 class="example-indicator-secondary" id="article-post">Article/Post</h3>
-		<figure>
-			<div class="article-card card">
-				<a href="#">
-					<img src="images/knead.jpg" alt="Article Image">
-					<h4 class="card-heading">Article Title</h4>
-					<p>Lorem ipsum dolor has enim denique ei. Vix ex posse porro conclusionemque.</p>
-					<p class="tertiary-copy">April 4, 2019</p>
-				</a>
-			</div>
-		</figure>
-		
-		<h3 class="example-indicator-secondary" id="person-profile">Person/Profile</h3>
-		<figure>
-			<div class="profile-card card">
-				<img src="images/profile.jpg" alt="Profile Picture">
-				<h4 class="card-heading">Jane Doe</h4>
-				<a href="mailto:jane.doe@example.com">jane.doe@example.com</a>
-				<a href="tel:123-456-7891">(123)456-7891</a>
-			</div>
-		</figure>
-
-		<h3 class="example-indicator-secondary" id="call-to-action">Call to Action</h3>
-		<figure>
-			<div class="cta-card card">
-				<svg>
-				</svg>
-				<p>This is a call to action!</p>
-				<a href="#" class="normal-button">Sign Up</a>
-			</div>
-		</figure>
-
 	</main>
 
 	<footer>
