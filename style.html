@@ -21,14 +21,36 @@
 		</nav>
 	</header>
 	
+	<div class="sidebar">	
+		<nav class="side-nav">
+			<h2 class="nav-heading">Style</h2>
+			<ul>
+				<li><a href="#color-pallettes">Color Pallettes</a>
+					<ul>
+						<li><a href="#brand-colors">Brand Colors</a></li>
+						<li><a href="#text-colors">Text Colors</a></li>
+					</ul>
+				</li>
+				<li><a href="#typography">Typography</a></li>
+					<ul>
+						<li><a href="#typefaces">Typefaces</a></li>
+						<li><a href="#headings">Headings</a></li>
+						<li><a href="#body-text">Body Text</a></li>
+						<li><a href="#block-quotes">Block Quotes</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	
 	<main>
 		<h1>Loop Styles</h1>
 		
 		<section>
 			
-			<h2 class="example-indicator">Color Pallette</h2>	
+			<h2 class="example-indicator" id="color-pallettes">Color Pallette</h2>	
 			
-			<h3 class="example-indicator-secondary">Brand Colors</h3>
+			<h3 class="example-indicator-secondary" id="brand-colors">Brand Colors</h3>
 
 			<figure>	
 				<figcaption>Orange</figcaption>
@@ -96,7 +118,7 @@
 				</svg>
 			</figure>
 			
-			<h3  class="example-indicator-secondary">Text Colors</h3>
+			<h3  class="example-indicator-secondary" id="text-colors">Text Colors</h3>
 
 			<figure>
 				<figcaption>Main</figcaption>
@@ -131,9 +153,9 @@
 		</section>
 		<section>
 
-			<h2>Typography</h2>
+			<h2 id="typography">Typography</h2>
 			
-			<h3 class="example-indicator-secondary">Typefaces</h3>
+			<h3 class="example-indicator-secondary" id="typefaces">Typefaces</h3>
 
 			<figure>
 				
@@ -156,7 +178,7 @@
 			</figure>
 			
 
-			<h3 class="example-indicator-secondary">Headings</h3>
+			<h3 class="example-indicator-secondary" id="headings">Headings</h3>
 
 			<figure>
 
@@ -180,7 +202,7 @@
 
 			</figure>
 			
-			<h3 class="example-indicator-secondary">Body Text</h3>
+			<h3 class="example-indicator-secondary" id="body-text">Body Text</h3>
 
 			<h4>Featured Text</h4>
 
@@ -236,7 +258,7 @@
 			<p class="tertiary-copy">Lorem ipsum dolor has <a href="#">enim denique</a> ei. Vix ex <strong>posse porro</strong> conclusionemque. An usu <em>minim quaestio senserit</em>, magna pericula.</p>
 			</figure>
 			
-			<h3 class="example-indicator-secondary">Block Quotes</h3>
+			<h3 class="example-indicator-secondary" id="block-quotes">Block Quotes</h3>
 				<figure>
 				<blockquote>
 					<p>Vix ex posse porro conclusionemque, erat voluptua prodesset in est.</p>
@@ -246,19 +268,35 @@
 		</section>	
 	</main>
 
-	<footer class="primary-nav">
-		<p>Loop was created by Kirsten Lofgren</p>
+	<footer>
 
-		<p>Kirsten Lofgren was born and raised in east Tennessee. She grew up exploring forests on her own and hiking on mountains with her family. She moved west to explore the deserts and mountains of Utah, where she received her BFA in Studio Art from Brigham Young University in 2015. She has exhibited around the United States and in Berlin, participating in shows at the Woodbury Art Museum, the Bemis Arts Building, and The WYE among others. She now makes drawings and oil paintings in Austin, TX.</p>
-		
-		<nav>
+		<nav class="secondary-nav">
 			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="style.html"  class="current-page">Style</a></li>
+				<li><a href="components.html">Components</a></li>
+				<li><a href="layout.html">Layout</a></li>
+			</ul>
+		</nav>
+
+		<div class="tertiary-copy footer-text">
+			<p>Loop was created by Kirsten Lofgren</p>
+		
+			<p>Kirsten Lofgren was born and raised in east Tennessee. She grew up exploring forests on her own and hiking on mountains with her family. She moved west to explore the deserts and mountains of Utah, where she received her BFA in Studio Art from Brigham Young University in 2015. She has exhibited around the United States and in Berlin, participating in shows at the Woodbury Art Museum, the Bemis Arts Building, and The WYE among others. She now makes drawings and oil paintings in Austin, TX.</p>
+		</div>
+		
+		<div class="footer-links">
+			<ul class="primary-nav">
 				<li><a href="https://www.linkedin.com/in/kirstenllofgren/">LinkedIn</a></li>
 				<li><a href="https://www.instagram.com/kirstenlofgren/">Instagram</a></li>
 				<li><a href="https://kirstenlofgren.com/">Portfolio</a></li>
 			</ul>
-		</nav>
-		<p>Copyright ©2019 Kirsten Lofgren</p>
+		</div>
+
+		<div class="tertiary-copy copy-text">
+			<p>Copyright ©2019 Kirsten Lofgren</p>
+		</div>
+
 	</footer>
 </body>
 </html>
