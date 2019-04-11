@@ -306,15 +306,13 @@ Nav
 	/*
 	Sidebar
 	*/
+		
 		.sidebar {
-			float: left;
-			left: 18rem;
-			margin: var(--margin-xlarge) 0 29rem;
 			position: fixed;
-			visibility: hidden;
-		}
-		.side-nav {
-			max-width: 18rem;
+			overflow-y: auto;
+			top: 0;
+			bottom: 0;
+
 		}
 		.side-nav ul {
 			background-color: var(--color-primary-1);
@@ -1091,7 +1089,17 @@ Components
 				max-width: 5rem;
 			}
 		}
-
+/* ==========================================================================
+Layout
+========================================================================== */
+.article-grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 1rem;
+}
+.grid-layout {
+	max-width: 70rem;
+}
 /*aside nav (style and components: h2s),
  copyright on same row, media queries, animated buttons, 
  button push in hide replace check boxes in label, 
