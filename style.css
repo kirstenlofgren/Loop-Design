@@ -312,6 +312,7 @@ Nav
 			overflow-y: auto;
 			top: 0;
 			bottom: 0;
+			visibility: hidden;
 
 		}
 		.side-nav ul {
@@ -337,9 +338,11 @@ Nav
 		}
 		@media (min-width: 1220px) {
 			.sidebar {
-				position: absolute;
-				top: 12rem;
+				bottom: 0;
+				height: 60vh;
 				left: 0;
+				position: fixed;
+				top: 14.25rem;
 				visibility: visible;
 			}
 		}
@@ -1048,8 +1051,10 @@ Components
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			max-width: 28rem;
 			padding: 1rem;			
+		}
+		.card-example {
+			max-width: 28rem;
 		}
 		.article-card a {
 			color: var(--color-secondary-3);
@@ -1092,17 +1097,107 @@ Components
 /* ==========================================================================
 Layout
 ========================================================================== */
-.article-grid {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-gap: 1rem;
-}
-.grid-layout {
-	max-width: 70rem;
-}
-/*aside nav (style and components: h2s),
+	/*
+	Card Grid
+	*/
+		.article-grid-layout {
+			display: grid;
+			grid-gap: 1.5rem;
+			grid-template-columns: repeat(12, 1fr);
+			margin: 3rem 5vw 10rem;
+			max-width: 100%;
+		}
+		.article-card {
+			grid-column: span 12;
+		}
+		@media (min-width: 620px) {	
+			.article-card {
+				grid-column: span 6;
+			}
+		}
+		@media (min-width: 1220px) {
+			.article-card {
+				grid-column: span 3;
+			}
+		}
+	/*
+	Card Callouts
+	*/
+		.cta-grid-layout {
+			display: grid;
+			grid-gap: 1.5rem;
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: repeat(4, 30vh);
+			margin: 3rem 5vw 10rem;
+			max-width: 100%;
+		}
+		.cta-card:first-child {
+			grid-column: 1 / span 12;
+			grid-row: 1 / span 2;
+		}
+		.cta-card {
+			grid-column: span 12;
+			justify-content: center;
+		}
+		@media (min-width: 620px) {
+			.cta-card:first-child {
+				grid-column: 1 / span 12;
+				grid-row: 1 / span 2;
+			}
+			.cta-card {
+				grid-column: span 6;
+				justify-content: center;
+			}
+		}
+		@media (min-width: 1220px) {
+			.cta-card:first-child {
+				grid-column: 1 / span 8;
+				grid-row: 1 / span 2;
+			}
+			.cta-card {
+				grid-column: span 4;
+				justify-content: center;
+			}
+			.cta-grid-layout {
+				grid-template-rows: 30vh 30vh;
+			}
+		}
+		@media (min-width: 1700px) {
+			.cta-grid-layout {
+				margin: 3rem 8vw 10rem;
+			}
+		}
+
+			
+/*aside nav (style and components: 	h2s),
  copyright on same row, media queries, animated buttons, 
  button push in hide replace check boxes in label, 
  range with webkit maybe styeable css tricks article, get check boxes to work*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
