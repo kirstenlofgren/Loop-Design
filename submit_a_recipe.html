@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Submit a Recipe</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:500|Source+Sans+Pro:400,400i,600" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="logo">Confectionarium</div>
+
+		<nav class="primary-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="submit_a_recipe.html" class="current-page">Submit a Recipe</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<div>
+
+			<h1>Submit a Recipe</h1>
+
+				<form action="#">
+
+					<label for="recipe-name">Recipe Name</label>
+					<input required type="text" id="recipe-name" name="recipe-name" placeholder="Recipe name">
+
+					<label for="message">Short Description</label>
+					<textarea id="message" name="message" placeholder="Type a short description of your recipe here..."></textarea>
+
+					<label for="email">Your Email</label>
+					<input required type="email" id="email" name="email" placeholder="Your Email">
+					
+					<label for="message">Recipe</label>
+					<textarea id="message" name="message" placeholder="Type your recipe here..."></textarea>
+
+					<label for="choice">Choose a category</label>
+					<select required id="choice" name="option-choice">
+						<option value="" selected disabled hidden>Select Option</option>
+						<option>Cakes</option>
+						<option>Candies</option>
+						<option>Other</option>
+					</select>
+					
+					<button type="submit">Submit</button>
+
+				</form>
+		</div>
+
+	</main>
+
+	<footer>
+
+		<nav class="secondary-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="submit_a_recipe.html" class="current-page">Submit a Recipe</a></li>
+			</ul>
+		</nav>
+
+		<div class="tertiary-copy footer-text">
+			<p>Confectionarium was created by Kirsten Lofgren</p>
+		
+			<p>Kirsten Lofgren was born and raised in east Tennessee. She grew up exploring forests on her own and hiking on mountains with her family. She moved west to explore the deserts and mountains of Utah, where she received her BFA in Studio Art from Brigham Young University in 2015. She has exhibited around the United States and in Berlin, participating in shows at the Woodbury Art Museum, the Bemis Arts Building, and The WYE among others. She now makes drawings and oil paintings in Austin, TX.</p>
+		</div>
+		
+		<div class="footer-links">
+			<ul class="primary-nav">
+				<li><a href="https://www.linkedin.com/in/kirstenllofgren/">LinkedIn</a></li>
+				<li><a href="https://www.instagram.com/kirstenlofgren/">Instagram</a></li>
+				<li><a href="https://kirstenlofgren.com/">Portfolio</a></li>
+			</ul>
+		</div>
+
+		<div class="tertiary-copy copy-text">
+			<p>Copyright ©2019 Kirsten Lofgren</p>
+		</div>
+
+	</footer>
+</body>
+</html>
